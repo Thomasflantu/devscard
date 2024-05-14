@@ -18,11 +18,11 @@ skill({ description: '...' }) — returns skill with a description displayed whe
 
 */
 
-export const apolloGraphql = createSkillFactory({
-  name: 'Apollo GraphQL',
-  icon: 'simple-icons:apollographql',
-  iconColor: '#311C87',
-  url: 'https://www.apollographql.com/',
+export const C = createSkillFactory({
+  name: 'C',
+  icon: 'simple-icons:c',
+  iconColor: '#A8B9CC',
+  url: 'https://www.w3schools.com/c/c_intro.php',
 });
 
 export const astro = createSkillFactory({
@@ -32,25 +32,25 @@ export const astro = createSkillFactory({
   url: 'https://astro.build/',
 });
 
-export const chakraUi = createSkillFactory({
-  name: 'Chakra UI',
-  icon: 'simple-icons:chakraui',
-  iconColor: '#319795',
-  url: 'https://chakra-ui.com/',
+export const cSharp = createSkillFactory({
+  name: 'Csharp',
+  icon: 'simple-icons:csharp',
+  iconColor: '#512BD4',
+  url: 'https://learn.microsoft.com/en-us/dotnet/csharp/',
 });
 
-export const cypress = createSkillFactory({
-  name: 'Cypress',
-  icon: 'simple-icons:cypress',
-  iconColor: '#17202C',
-  url: 'https://www.cypress.io/',
+export const java = createSkillFactory({
+  name: 'Java',
+  icon: 'simple-icons:oracle',
+  iconColor: '#F80000',
+  url: 'https://www.oracle.com/java/',
 });
 
-export const eslint = createSkillFactory({
-  name: 'ESLint',
-  icon: 'simple-icons:eslint',
-  iconColor: '#4B32C3',
-  url: 'https://eslint.org/',
+export const kotlin = createSkillFactory({
+  name: 'Kotlin',
+  icon: 'simple-icons:kotlin',
+  iconColor: '#7F52FF',
+  url: 'https://kotlinlang.org/',
 });
 
 export const firebase = createSkillFactory({
@@ -60,32 +60,32 @@ export const firebase = createSkillFactory({
   url: 'https://firebase.google.com/',
 });
 
-export const jest = createSkillFactory({
+export const flutter = createSkillFactory({
   name: 'Jest',
-  icon: 'simple-icons:jest',
-  iconColor: '#C21325',
-  url: 'https://jestjs.io/',
+  icon: 'simple-icons:flutter',
+  iconColor: '#02569B',
+  url: 'https://flutter.dev/',
 });
 
-export const mongoDb = createSkillFactory({
-  name: 'MongoDB',
-  icon: 'simple-icons:mongodb',
-  iconColor: '#47A248',
-  url: 'https://www.mongodb.com/',
+export const dotNet = createSkillFactory({
+  name: '.NET',
+  icon: 'simple-icons:dotnet',
+  iconColor: '#512BD4',
+  url: 'https://dotnet.microsoft.com/en-us/',
 });
 
-export const nestJs = createSkillFactory({
-  name: 'NestJS',
-  icon: 'simple-icons:nestjs',
-  iconColor: '#E0234E',
-  url: 'https://nestjs.com/',
+export const nodeJs = createSkillFactory({
+  name: 'node.js',
+  icon: 'simple-icons:nodedotjs',
+  iconColor: '#5FA04E',
+  url: 'https://nodejs.org/en',
 });
 
-export const nextJs = createSkillFactory({
-  name: 'Next.js',
-  icon: 'simple-icons:nextdotjs',
-  iconColor: '#000000',
-  url: 'https://nextjs.org/',
+export const webFlow = createSkillFactory({
+  name: 'Webflow',
+  icon: 'simple-icons:webflow',
+  iconColor: '#146EF5',
+  url: 'https://webflow.com/',
 });
 
 export const nx = createSkillFactory({

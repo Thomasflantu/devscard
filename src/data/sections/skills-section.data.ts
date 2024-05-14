@@ -1,23 +1,6 @@
 import type { SkillsSection } from '@/types/sections/skills-section.types';
 import type { ReadonlyDeep } from 'type-fest';
-import {
-  apolloGraphql,
-  astro,
-  chakraUi,
-  cypress,
-  eslint,
-  firebase,
-  mongoDb,
-  nestJs,
-  pnpm,
-  postgreSql,
-  prettier,
-  react,
-  sass,
-  supabase,
-  tailwindCss,
-  typescript,
-} from '../helpers/skills';
+import { C, astro, cSharp, dotNet, firebase, java, kotlin, nodeJs, postgreSql, react, typescript, webFlow } from '../helpers/skills';
 
 const skillsSectionData = {
   config: {
@@ -41,6 +24,15 @@ const skillsSectionData = {
         }),
         postgreSql({ level: 1 }),
         firebase({ level: 1 }),
+        C({level: 2}),
+        cSharp({level: 2}),
+        java({level: 5}),
+        kotlin({level: 4}),
+        dotNet({level: 3}),
+        nodeJs({level: 3}),
+        webFlow({level: 3, description: 'Op dit moment gebruik ik webflow met mijn eigen bedrijf BijGepast ' + 
+        'https://bijgepast.com'}),
+
       ],
     },
     {
