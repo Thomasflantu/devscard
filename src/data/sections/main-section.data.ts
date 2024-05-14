@@ -2,9 +2,6 @@ import type { MainSection } from '@/types/sections/main-section.types';
 import type { ReadonlyDeep } from 'type-fest';
 import { facebook, github, instagram, linkedin, twitter } from '../helpers/links';
 
-const phoneNumber = '+31633089143'
-const emailAddress = 'thomas.flantua@gmail.com'
-
 const mainSectionData = {
   config: {
     icon: 'fa6-solid:user',
@@ -16,13 +13,13 @@ const mainSectionData = {
   fullName: 'Thomas Flantua',
   role: 'Student Technische Informatica aan Breda Avans',
   details: [
-    { label: 'Phone', value: phoneNumber, url: 'tel:' + phoneNumber },
-    { label: 'Email', value: emailAddress, url: 'mailto:' + emailAddress },
+    { label: 'Phone', value: '+31633089143', url: 'tel:' + '+31633089143' },
+    { label: 'Email', value: 'thomas.flantua@gmail.com', url: 'mailto:' + 'thomas.flantua@gmail.com' },
     { label: 'From', value: 'Dordrecht, Nederland' },
   ],
   pdfDetails: [
-    { label: 'Phone', value: phoneNumber },
-    { label: 'Email', value: emailAddress },
+    { label: 'Phone', value: '+31633089143' },
+    { label: 'Email', value: 'thomas.flantua@gmail.com' },
     { label: 'LinkedIn', value: '/in/thomas-flantua-3b543517b', url: 'https://linkedin.com' },
     { label: 'Website', value: 'https://euphonious-queijadas-62a72f.netlify.app/#profile', url: '/', fullRow: true },
   ],
