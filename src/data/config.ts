@@ -13,7 +13,9 @@ const config = {
   meta: {
     title: 'Thomas Flantua - Student Technische informatie Breda Avans',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales ac dui at vestibulum. In condimentum metus id dui tincidunt, in blandit mi vehicula.',
+      'Een hardwerkende student. Wilt zijn vaardigheden en passie inzetten om de missie van een onderneming vorm te geven. ' + 
+      ' Bedreven in het omgaan met technologie, waaronder diverse sociaal-mediaplatforms en office-programma’s. ' + 
+      'Beschikt over gevorderde computervaardigheden. Heeft een positieve attitude en is bereid en gemotiveerd om nieuwe programma’s te leren beheersen.',
     faviconPath: '/src/assets/my-image.jpeg',
   },
   pdf: {
