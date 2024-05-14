@@ -27,7 +27,7 @@ const mainSectionData = {
   'Een hardwerkende student. Wilt zijn vaardigheden en passie inzetten om de missie van een onderneming vorm te geven. ' + 
   ' Bedreven in het omgaan met technologie, waaronder diverse sociaal-mediaplatforms en office-programma’s. ' + 
   'Beschikt over gevorderde computervaardigheden. Heeft een positieve attitude en is bereid en gemotiveerd om nieuwe programma’s te leren beheersen.',
-  // tags: [{ name: 'Open for freelance' }, { name: 'Available for mentoring' }, { name: 'Working on side project' }],
+  tags: [],
   action: {
     label: 'Download CV',
     url: '/cv.pdf',
