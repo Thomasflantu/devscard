@@ -9,7 +9,7 @@ const mainSectionData = {
     slug: 'profile',
     visible: true,
   },
-  image: import('@/assets/my-image.jpeg'),
+  image: import('@/assets/HeadImage_CV.jpg'),
   fullName: 'Thomas Flantua',
   role: 'Student Technische Informatica aan Breda Avans',
   details: [
