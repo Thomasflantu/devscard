@@ -45,7 +45,7 @@ const experienceSectionData = {
       tagsList: {
         title: 'Technologies',
         //TODO add some technologies to the tags
-        tags: [azure, azureDevOps, googleCloud, visualStudio],
+        tags: [azure(), azureDevOps(), googleCloud(), visualStudio()],
       },
       links: [website({ url: 'https://www.abf.store/s/en/' })],
     },
@@ -65,7 +65,7 @@ const experienceSectionData = {
       tagsList: {
         title: 'Technologies',
         //TODO add some technologies to the tags
-        tags: [webFlow, flutter, visualStudioCode],
+        tags: [webFlow(), flutter(), visualStudioCode()],
       },
       links: [website({ url: 'https://www-bijgepast-com.webflow.io/' }),],
     },
