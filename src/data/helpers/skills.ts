@@ -61,7 +61,7 @@ export const firebase = createSkillFactory({
 });
 
 export const flutter = createSkillFactory({
-  name: 'Jest',
+  name: 'Flutter',
   icon: 'simple-icons:flutter',
   iconColor: '#02569B',
   url: 'https://flutter.dev/',

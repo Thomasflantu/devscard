@@ -1,6 +1,6 @@
 import type { SkillsSection } from '@/types/sections/skills-section.types';
 import type { ReadonlyDeep } from 'type-fest';
-import { C, astro, azure, cSharp, dotNet, firebase, googleCloud, intelliJ, java, kotlin, nodeJs, postgreSql, react, typescript, visualStudio, visualStudioCode, webFlow } from '../helpers/skills';
+import { C, astro, azure, cSharp, dotNet, firebase, flutter, googleCloud, intelliJ, java, kotlin, nodeJs, postgreSql, react, typescript, visualStudio, visualStudioCode, webFlow } from '../helpers/skills';
 
 const skillsSectionData = {
   config: {
@@ -24,6 +24,7 @@ const skillsSectionData = {
         C({level: 2}),
         cSharp({level: 2}),
         java({level: 5}),
+        flutter({level: 3}),
         kotlin({level: 4}),
         dotNet({level: 3}),
         nodeJs({level: 3}),
