@@ -95,11 +95,11 @@ export const nx = createSkillFactory({
   url: 'https://nx.dev/',
 });
 
-export const pnpm = createSkillFactory({
-  name: 'pnpm',
-  icon: 'simple-icons:pnpm',
-  iconColor: '#F69220',
-  url: 'https://pnpm.io/',
+export const googleCloud = createSkillFactory({
+  name: 'Google cloud',
+  icon: 'simple-icons:googlecloud',
+  iconColor: '#4285F4',
+  url: 'https://cloud.google.com/',
 });
 
 export const postgreSql = createSkillFactory({
@@ -109,11 +109,11 @@ export const postgreSql = createSkillFactory({
   url: 'https://www.postgresql.org/',
 });
 
-export const prettier = createSkillFactory({
-  name: 'Prettier',
-  icon: 'simple-icons:prettier',
-  iconColor: '#F7B93E',
-  url: 'https://prettier.io/',
+export const azureDevOps = createSkillFactory({
+  name: 'Azure DevOps',
+  icon: 'simple-icons:azuredevops',
+  iconColor: '#0078D7',
+  url: 'https://azure.microsoft.com/nl-nl/products/devops',
 });
 
 export const react = createSkillFactory({
@@ -123,32 +123,32 @@ export const react = createSkillFactory({
   url: 'https://reactjs.org/',
 });
 
-export const reactQuery = createSkillFactory({
-  name: 'React Query',
-  icon: 'simple-icons:reactquery',
-  iconColor: '#FF4154',
-  url: 'https://tanstack.com/query',
+export const azure = createSkillFactory({
+  name: 'Azure',
+  icon: 'simple-icons:azurefunctions',
+  iconColor: '#0062AD',
+  url: 'https://azure.microsoft.com/en-us/',
 });
 
-export const sass = createSkillFactory({
-  name: 'SASS',
-  icon: 'simple-icons:sass',
-  iconColor: '#CC6699',
-  url: 'https://sass-lang.com/',
+export const intelliJ = createSkillFactory({
+  name: 'intelliJ',
+  icon: 'simple-icons:intellijidea',
+  iconColor: '#000000',
+  url: 'https://www.jetbrains.com/idea/',
 });
 
-export const supabase = createSkillFactory({
-  name: 'Supabase',
-  icon: 'simple-icons:supabase',
-  iconColor: '#3ECF8E',
-  url: 'https://supabase.io/',
+export const visualStudioCode = createSkillFactory({
+  name: 'Visual studio code',
+  icon: 'simple-icons:visualstudiocode',
+  iconColor: '#007ACC',
+  url: 'https://code.visualstudio.com/',
 });
 
-export const tailwindCss = createSkillFactory({
-  name: 'Tailwind CSS',
-  icon: 'simple-icons:tailwindcss',
-  iconColor: '#06B6D4',
-  url: 'https://tailwindcss.com/',
+export const visualStudio = createSkillFactory({
+  name: 'Visual studio',
+  icon: 'simple-icons:visualstudio',
+  iconColor: '#5C2D91',
+  url: 'https://visualstudio.microsoft.com/',
 });
 
 export const typescript = createSkillFactory({

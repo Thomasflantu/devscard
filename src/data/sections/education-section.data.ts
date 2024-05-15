@@ -4,28 +4,28 @@ import { website } from '../helpers/links';
 
 const educationSectionData = {
   config: {
-    title: 'Education',
-    slug: 'education',
+    title: 'Educatie',
+    slug: 'Educatie',
     icon: 'fa6-solid:graduation-cap',
     visible: true,
   },
   diplomas: [
     {
-      title: 'Information Technology',
-      institution: 'Wrocław University of Science and Technology',
-      image: import('@/assets/logos/wroclaw-university-of-technology.jpg'),
-      dates: [new Date('2014.10'), new Date('2016.07')],
-      description: 'Master degree. Specialization in software development.',
-      links: [website({ url: '#' })],
+      title: 'Technische informatica',
+      institution: 'Avans Hogeschool breda',
+      image: import('@/assets/logos/AvansLogo.png'),
+      dates: [new Date('2020.09'), null],
+      description: 'HBO Bachelor of science',
+      links: [website({ url: 'https://www.avans.nl/studeren/opleidingen/technische-informatica/voltijd' })],
     },
     {
-      title: 'Information Technology',
-      institution: 'Wrocław University of Science and Technology',
-      image: import('@/assets/logos/wroclaw-university-of-technology.jpg'),
-      dates: [new Date('2011.10'), new Date('2014.07')],
-      description: "Bachelor's degree. Specialization in application development.",
-      links: [website({ url: '#' })],
-    },
+      title: 'Plan van je leven',
+      institution: 'Hogeschool Utrecht',
+      image: import('@/assets/logos/HogeschoolUtrechtLogo.png'),
+      dates: [new Date('2023.09'), new Date('2024.02')],
+      description: 'Minor pedogogiek',
+      links: [website({ url: 'https://husite.nl/minors/minors/project-van-je-leven/' })],
+    }
   ],
 } as const satisfies ReadonlyDeep<EducationSection>;
 

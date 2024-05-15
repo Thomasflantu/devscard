@@ -1,26 +1,23 @@
 import type { SkillsSection } from '@/types/sections/skills-section.types';
 import type { ReadonlyDeep } from 'type-fest';
-import { C, astro, cSharp, dotNet, firebase, java, kotlin, nodeJs, postgreSql, react, typescript, webFlow } from '../helpers/skills';
+import { C, astro, azure, cSharp, dotNet, firebase, googleCloud, intelliJ, java, kotlin, nodeJs, postgreSql, react, typescript, visualStudio, visualStudioCode, webFlow } from '../helpers/skills';
 
 const skillsSectionData = {
   config: {
-    title: 'Skills',
-    slug: 'skills',
+    title: 'Vaardigheden',
+    slug: 'vaardigheden',
     icon: 'fa6-solid:bars-progress',
     visible: true,
   },
   skillSets: [
     {
-      title: 'I already know',
+      title: 'Wat ik al weet',
       skills: [
         react({
           level: 1,
-          description:
-            'Proin ut erat sed massa tempus suscipit. Mauris efficitur nunc sem, nec scelerisque ligula bibendum ut.',
         }),
         typescript({
           level: 4,
-          description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
         }),
         postgreSql({ level: 1 }),
         firebase({ level: 1 }),
@@ -32,16 +29,20 @@ const skillsSectionData = {
         nodeJs({level: 3}),
         webFlow({level: 3, description: 'Op dit moment gebruik ik webflow met mijn eigen bedrijf BijGepast ' + 
         'https://bijgepast.com'}),
-
+        googleCloud({level: 2}),
+        azure({level: 3}),
+        visualStudioCode({level: 4, description: 'Deze tool gebruik ik vooral tegenwoordig'}),
+        visualStudio({level: 2, description: 'Deze tool heb ik gebruikt tijdens mijn stage bij ABF'}),
+        intelliJ({level: 4, description: 'Deze tool heb ik veel gebruikt op school in de eerste 2 jaar'})
       ],
     },
     {
-      title: 'I want to learn',
+      title: 'Wat ik nog wil leren',
       skills: [astro({description: 'De website is gemaakt met Astro, maar persoonlijk weet ik er nog niet veel over, '+ 
       'dus zou ik er graag meer over willen leren'})],
     },
     {
-      title: 'I speak',
+      title: 'Welke talen ik spreek',
       skills: [
         { icon: 'circle-flags:nl', name: 'Nederlands - moedertaal' },
         { icon: 'circle-flags:us', name: 'English - B2' },

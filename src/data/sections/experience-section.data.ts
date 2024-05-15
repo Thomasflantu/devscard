@@ -1,22 +1,21 @@
 import type { ExperienceSection } from '@/types/sections/experience-section.types';
 import type { ReadonlyDeep } from 'type-fest';
 import { facebook, github, instagram, linkedin, twitter, website } from '../helpers/links';
-import {
-} from '../helpers/skills';
+import { azure, azureDevOps, flutter, googleCloud, visualStudio, visualStudioCode, webFlow } from '../helpers/skills';
 
 const experienceSectionData = {
   config: {
-    title: 'Work experience',
-    slug: 'experience',
+    title: 'Werk ervaring',
+    slug: 'ervaring',
     icon: 'fa6-solid:suitcase',
     visible: true,
   },
   jobs: [
     {
-      role: 'Senior front-end developer',
-      company: 'Google',
-      image: import('@/assets/logos/google-logo.jpg'),
-      dates: [new Date('2020-02'), null],
+      role: 'AGF medewerker',
+      company: 'Dirk van den broek',
+      image: import('@/assets/DirkVanDenBroek.webp'),
+      dates: [new Date('2018-06'), null],
       description: `
         - In tristique vulputate augue vel egestas.
         - Quisque ac imperdiet tortor, at lacinia ex.
@@ -26,17 +25,17 @@ const experienceSectionData = {
         - Fusce eu urna ut magna malesuada fringilla.
       `,
       tagsList: {
-        title: 'Technologies',
+        title: 'Vulploegmedewerker',
         //TODO add some technologies to the tags
         tags: [],
       },
-      links: [facebook({ url: '#' }), linkedin({ url: '#' })],
+      links: [],
     },
     {
-      role: 'React.js developer',
-      company: 'Facebook',
-      image: import('@/assets/logos/facebook-logo.png'),
-      dates: [new Date('2019-04'), new Date('2020-02')],
+      role: 'Stagair',
+      company: 'ABF Bearings / ABF Motors',
+      image: import('@/assets/logos/ABFBearings.jpeg'),
+      dates: [new Date('2022-09'), new Date('2023-02')],
       description: `
         - Aenean eget ultricies felis. Pellentesque dictum massa ut tellus eleifend, sed posuere massa mattis.
         - Ut posuere massa lacus, eleifend molestie tortor auctor vel.
@@ -46,15 +45,15 @@ const experienceSectionData = {
       tagsList: {
         title: 'Technologies',
         //TODO add some technologies to the tags
-        tags: [],
+        tags: [azure, azureDevOps, googleCloud, visualStudio],
       },
-      links: [website({ url: '#' }), instagram({ url: '#' })],
+      links: [website({ url: 'https://www.abf.store/s/en/' })],
     },
     {
-      role: 'Junior front-end developer',
-      company: 'GitLab',
-      image: import('@/assets/logos/gitlab-logo.png'),
-      dates: [new Date('2016-09'), new Date('2019-04')],
+      role: 'Eigenaar',
+      company: 'BijGepast',
+      image: import('@/assets/logos/BijGepastLogo.png'),
+      dates: [new Date('2021-10'), null],
       description: `
         Nulla volutpat justo ante, rhoncus posuere massa egestas in:
 
@@ -66,9 +65,9 @@ const experienceSectionData = {
       tagsList: {
         title: 'Technologies',
         //TODO add some technologies to the tags
-        tags: [],
+        tags: [webFlow, flutter, visualStudioCode],
       },
-      links: [twitter({ url: '#' }), github({ url: '#' })],
+      links: [website({ url: 'https://www-bijgepast-com.webflow.io/' }),],
     },
   ],
 } as const satisfies ReadonlyDeep<ExperienceSection>;
