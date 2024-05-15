@@ -17,12 +17,11 @@ const experienceSectionData = {
       image: import('@/assets/logos/DirkVanDenBroek.webp'),
       dates: [new Date('2018-06'), null],
       description: `
-        - In tristique vulputate augue vel egestas.
-        - Quisque ac imperdiet tortor, at lacinia ex.
-        - Duis vel ex hendrerit, commodo odio sed, aliquam enim.
-        - Ut arcu nulla, tincidunt eget arcu eget, molestie vulputate nisi.
-        - Nunc malesuada leo et est iaculis facilisis.
-        - Fusce eu urna ut magna malesuada fringilla.
+        - Ik ben hier begonnen als 16 jarig jongetje
+        - Tot de dag van vandaag werk ik er nog steeds
+        - Ik doe veel met groente en fruit, hiervan leer ik ook weer nieuwe dingen
+        - Ik heb geleerd hoe ik mensen kan aansturen en heb veel ervaring opgedaan met mensen
+        - Ik ben nog steeds veel aan het leren van mijn managers bij de Dirk
       `,
       tagsList: {
         title: 'Vulploegmedewerker',
@@ -37,10 +36,11 @@ const experienceSectionData = {
       image: import('@/assets/logos/ABFBearings.jpeg'),
       dates: [new Date('2022-09'), new Date('2023-02')],
       description: `
-        - Aenean eget ultricies felis. Pellentesque dictum massa ut tellus eleifend, sed posuere massa mattis.
-        - Ut posuere massa lacus, eleifend molestie tortor auctor vel.
-        - Sed sed sollicitudin eros, id ultricies mi. Aliquam sodales elit vel ante tempor, non vehicula nibh facilisis.
-        - Cras feugiat ultricies maximus. Aliquam tristique ex odio, ac semper urna accumsan a.
+        - Ik heb hier gezeten voor een project waarbij Machine learning betrokken is
+        - Ik heb veel nieuwe ervaringen over Azure en Google cloud opgedaan
+        - Ik heb werkervaring opgedaan vanuit het technische veld
+        - Ik heb meer zelfstandigheid leren werken en daarnaast ook met een team leren werken
+        - Ik ben professioneler geworden
       `,
       tagsList: {
         title: 'Technologies',
@@ -55,12 +55,15 @@ const experienceSectionData = {
       image: import('@/assets/logos/BijGepastLogo.png'),
       dates: [new Date('2021-10'), null],
       description: `
-        Nulla volutpat justo ante, rhoncus posuere massa egestas in:
+        Dit is mijn eigen bedrijf die ik met twee vriend van mij heb opgezet, de volgende putten zijn de dingen die ik heb geleerd:
 
-        - Quisque pellentesque, dolor nec sollicitudin iaculis, sem velit consequat ligula, eget tempus ligula leo et est.
-        - Maecenas ut elit sit amet nibh maximus condimentum in nec lorem. Pellentesque tincidunt odio vel leo suscipit, in interdum mi gravida.
+        - Het wordt me steeds duidelijker hoe een bedrijfsstructuur in elkaar zit
+        - Ondanks de verschillende projecten die we hebben gedraait, waarvan er nog geen 1 succesvol is, ben ik wel blij met de dingen
+        die ik hieruit heb geleerd.
+        - Ik ben blij met de kansen die ik krijg met mijn twee beste vrienden, die ook mijn compagnons zijn.
 
-        Donec non vulputate augue 🤓
+        Op dit moment zijn we bezig met onze eigen website te bouwen, hopelijk komt die binnenkort live :). We willen websites bouwen 
+        voor MKB'ers en uiteindelijk ook uitgroeien tot applicatiebeheer en marketing strategieën
       `,
       tagsList: {
         title: 'Technologies',
