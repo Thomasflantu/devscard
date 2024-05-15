@@ -14,7 +14,7 @@ const experienceSectionData = {
     {
       role: 'AGF medewerker',
       company: 'Dirk van den broek',
-      image: import('@/assets/DirkVanDenBroek.webp'),
+      image: import('@/assets/logos/DirkVanDenBroek.webp'),
       dates: [new Date('2018-06'), null],
       description: `
         - In tristique vulputate augue vel egestas.

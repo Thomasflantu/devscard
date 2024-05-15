@@ -5,8 +5,8 @@ import { facebook, github, instagram, linkedin, twitter } from '../helpers/links
 const mainSectionData = {
   config: {
     icon: 'fa6-solid:user',
-    title: 'Profile',
-    slug: 'profile',
+    title: 'Profiel',
+    slug: 'profiel',
     visible: true,
   },
   image: import('@/assets/HeadImage_CV.jpg'),
