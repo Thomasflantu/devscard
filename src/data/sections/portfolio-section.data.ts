@@ -1,8 +1,7 @@
 import type { PortfolioSection } from '@/types/sections/portfolio-section.types';
 import type { ReadonlyDeep } from 'type-fest';
 import { demo, github, mockups, website } from '../helpers/links';
-import {
-} from '../helpers/skills';
+import { azure, linuxUbuntu } from '../helpers/skills';
 
 const portfolioSectionData = {
   config: {
@@ -17,32 +16,27 @@ const portfolioSectionData = {
   },
   projects: [
     {
-      name: 'Golden Bulls',
+      name: 'EXR1 Autonamous driving',
       image: import('@/assets/portfolio/project-1.jpeg'),
       dates: [new Date('2020-03'), null],
       details: [
-        { label: 'Team size', value: '1 person' },
-        { label: 'My role', value: ['Front-end Developer', 'Designer'] },
-        { label: 'Company', value: 'None' },
-        { label: 'Category', value: ['Web app', 'Open source'] },
-      ],
-      pdfDetails: [
-        { label: 'Demo', value: 'https://golden-bulls-d73jd7.netlify.app', url: '#' },
-        { label: 'Repository', value: 'https://github.com/mark-freeman/golden-bulls', url: '#' },
-      ],
-      screenshots: [
-        { src: import('@/assets/portfolio/project-1-screenshot-1.jpg'), alt: 'First screenshot' },
-        { src: import('@/assets/portfolio/project-1-screenshot-2.jpg'), alt: 'Second screenshot' },
-        { src: import('@/assets/portfolio/project-1-screenshot-3.jpg'), alt: 'Third screenshot' },
+        { label: 'Team deelnemers', value: '4 personen' },
+        { label: 'Mijn rol', value: ['Infrastructuur', 'Planner'] },
+        { label: 'Bedrijf', value: 'EXRobotics' },
+        { label: 'Catogorie', value: ['Datastructuur', 'Robotics', 'School'] },
       ],
       description:
-        'In tristique vulputate augue vel egestas. Quisque ac imperdiet tortor, at lacinia ex. Duis vel ex hendrerit, commodo odio sed, aliquam enim. Ut arcu nulla, tincidunt eget arcu eget, molestie vulputate nisi. Nunc malesuada leo et est iaculis facilisis.',
+        'In het kader van de opleiding Technische Informatica op Breda Avans is gevraagd of er een onderzoek gestart kon ' + 
+        'worden over het op afstand monitoren en besturen van de EXR1 robot, met behulp van een zelfgemaakte applicatie ' + 
+        'om data te kunnen visualiseren. Het doel van deze opdracht is om te kijken hoe op afstand gemonitorde en bestuurde ' + 
+        'systemen kunnen worden geïmplementeerd om de EXR1-robot te controleren en te coördineren, en hoe de menselijke ' + 
+        'operator effectief kan communiceren met de robot.',
       tagsList: {
         title: 'Technologies',
         //TODO add some technologies to the tags
-        tags: [],
+        tags: [azure(), linuxUbuntu()],
       },
-      links: [mockups({ url: '#' }), demo({ url: '#' })],
+      links: [website({url: 'https://www.exrobotics.global/news-publications/exr-1-available-in-the-shell-gtc'})],
     },
     {
       name: 'TruQuest',

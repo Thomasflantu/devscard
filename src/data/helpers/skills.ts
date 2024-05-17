@@ -158,9 +158,9 @@ export const typescript = createSkillFactory({
   url: 'https://www.typescriptlang.org/',
 });
 
-export const vue = createSkillFactory({
-  name: 'Vue.js',
-  icon: 'simple-icons:vuedotjs',
-  iconColor: '#4FC08D',
-  url: 'https://vuejs.org/',
+export const linuxUbuntu = createSkillFactory({
+  name: 'linux Ubuntu',
+  icon: 'simple-icons:ubuntu',
+  iconColor: '#E95420',
+  url: 'https://ubuntu.com/',
 });
