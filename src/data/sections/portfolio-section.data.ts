@@ -63,8 +63,15 @@ const portfolioSectionData = {
         tags: [java(), C(), androidStudio()],
       },
       screenshots: [
-        { src: import('@/assets/portfolio/Quissteling/Schetsen.png'), alt: 'First screenshot' },
-      //  { src: import('@/assets/portfolio/Quissteling/QuisstelingWireframes2.0.pdf'), alt: 'Second screenshot' },
+        { src: import('@/assets/portfolio/Quissteling/Schetsen.png'), alt: 'Schetsen' },
+        { src: import('@/assets/portfolio/Quissteling/Wireframe1.png'), alt: 'Wireframe 1' },
+        { src: import('@/assets/portfolio/Quissteling/Wireframe2.png'), alt: 'Wireframe 2' },
+        { src: import('@/assets/portfolio/Quissteling/Wireframe3.png'), alt: 'Wireframe 3' },
+        { src: import('@/assets/portfolio/Quissteling/Wireframe4.png'), alt: 'Wireframe 4' },
+        { src: import('@/assets/portfolio/Quissteling/Wireframe5.png'), alt: 'Wireframe 5' },
+        { src: import('@/assets/portfolio/Quissteling/Wireframe6.png'), alt: 'Wireframe 6' },
+        { src: import('@/assets/portfolio/Quissteling/Wireframe7.png'), alt: 'Wireframe 7' },
+        { src: import('@/assets/portfolio/Quissteling/Wireframe8.png'), alt: 'Wireframe 8' },
       ],
       links: [
         github({ url: 'https://github.com/tflantua/Quissteling' })
