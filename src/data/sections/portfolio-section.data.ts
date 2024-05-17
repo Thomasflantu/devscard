@@ -1,7 +1,7 @@
 import type { PortfolioSection } from '@/types/sections/portfolio-section.types';
 import type { ReadonlyDeep } from 'type-fest';
 import { demo, github, mockups, website } from '../helpers/links';
-import { C, androidStudio, azure, intelliJ, java, linuxUbuntu, visualStudio, visualStudioCode } from '../helpers/skills';
+import { C, androidStudio, azure, intelliJ, java, kotlin, linuxUbuntu, visualStudio, visualStudioCode, webFlow } from '../helpers/skills';
 
 const portfolioSectionData = {
   config: {
@@ -40,11 +40,11 @@ const portfolioSectionData = {
     },
     {
       name: 'Quissteling',
-      image: import('@/assets/portfolio/project-2.jpeg'),
+      image: import('@/assets/portfolio/Quissteling/QuisstelingLogo.png'),
       dates: [new Date('2021-04'), new Date('2021-06')],
       details: [
         { label: 'Team', value: '5 mensen' },
-        { label: 'Mijn rol', value: ['Front-end Developer', 'Telefoon Developer', 'UX-Designer'] },
+        { label: 'Mijn rol', value: ['Front-end Developer', 'Telefoon Developer', 'UX-Designer', 'codebeheerder'] },
         { label: 'Bedrijf', value: 'Essteling (een verzonnen bedrijf van Avans)'},
         { label: 'Catagorie', value: ['Telefoon applicatie', 'UX designing', 'School'] },
       ],
@@ -78,20 +78,22 @@ const portfolioSectionData = {
       ],
     },
     {
-      name: 'Software Chasers',
+      name: 'Picum',
       image: import('@/assets/portfolio/project-3.jpeg'),
-      dates: [new Date('2018-01'), new Date('2020-12')],
+      dates: [new Date('2021-09'), new Date('2022-01')],
       details: [
-        { label: 'Team size', value: '3 people' },
-        { label: 'My role', value: ['Front-end Developer', 'Designer'] },
-        { label: 'Company', value: 'None' },
-        { label: 'Category', value: ['Web app', 'Open source'] },
+        { label: 'Team', value: '10 mensen' },
+        { label: 'Mijn rol', value: ['Front-end Developer', 'Designer', 'codebeheerde'] },
+        { label: 'Bedrijf', value: 'None' },
+        { label: 'Catogorie', value: ['Project opzet', 'Teamwork', 'School'] },
       ],
       pdfDetails: [
         { label: 'Repository', value: 'https://github.com/tflantua/Quissteling', url: 'https://github.com/tflantua/Quissteling' },
       ],
       description:
-        'Quisque id consectetur eros. In hac habitasse platea dictumst. Sed eu pulvinar orci. Mauris consequat, est in dignissim varius, neque nisl commodo mauris, id blandit risus justo eu nulla.',
+        'Bij dit project waren er 10 teamleden, de helft ging aan de plannen zitten voor het project en de andere helft zou bij ' +
+        'de tweede periode aan de applicatie zitten, om deze te bouwen. Dit project was meer bedoeld als een goede overdracht ' +
+        'van de ideeen, dan het daadwerkelijk juist te realiseren',
       tagsList: {
         title: 'Technologies',
         //TODO add some technologies to the tags
@@ -100,27 +102,43 @@ const portfolioSectionData = {
       links: [website({ url: '#' }), github({ url: '#' })],
     },
     {
-      name: 'Disco Ninjas',
+      name: 'Stadszicht',
       image: import('@/assets/portfolio/project-4.jpeg'),
       dates: [new Date('2016-05'), new Date('2018-07')],
       details: [
-        { label: 'Team size', value: '11 people' },
-        { label: 'My role', value: 'Front-end Developer' },
-        { label: 'Company', value: 'Google' },
-        { label: 'Category', value: ['Mobile app', 'Open source'] },
-      ],
-      pdfDetails: [
-        { label: 'Demo', value: 'https://disco-ninjas-g321ol.netlify.app', url: '#' },
-        { label: 'Repository', value: 'https://github.com/mark-freeman/disco-ninjas', url: '#' },
+        { label: 'Team', value: '10 mensen' },
+        { label: 'Mijn rol', value: 'Back-end developer' },
+        { label: 'Bedrijf', value: 'none' },
+        { label: 'Catagorie', value: ['Telefoon applicatie', 'School'] },
       ],
       description:
-        'Praesent eu neque tortor. Vestibulum ac magna nisl. Vivamus massa sem, feugiat in pharetra non, convallis egestas purus. Ut consequat ullamcorper sem, in euismod nibh posuere ut. ',
+        'Dit is hetzelfde als de beschrijving bij het project Picum, alleen nu zat ik in de uitvoerdende partij',
       tagsList: {
         title: 'Technologies',
         //TODO add some technologies to the tags
-        tags: [],
+        tags: [java(), androidStudio(), kotlin()],
       },
-      links: [mockups({ url: '#' }), github({ url: '#' })],
+      links: [],
+    },
+    {
+      name: 'BijGepast',
+      image: import('@/assets/logos/BijGepastLogo.png'),
+      dates: [new Date('2024-01'), null],
+      details: [
+        { label: 'Team', value: '3 mensen' },
+        { label: 'Mijn rol', value: ['Back-end developer', 'Front-end developer', 'Planner'] },
+        { label: 'Bedrijf', value: 'none' },
+        { label: 'Catagorie', value: ['Website', 'Eigen onderneming'] },
+      ],
+      description:
+        'Dit is een website die wij als BijGepast op dit moment aan het bouwen zijn, hierbij vinden wij het belangrijk ' + 
+        'dat de website een rustige maar mooie uitstraling heeft',
+      tagsList: {
+        title: 'Technologies',
+        //TODO add some technologies to the tags
+        tags: [webFlow()],
+      },
+      links: [website({url: 'https://www-bijgepast-com.webflow.io/'})],
     },
   ],
 } as const satisfies ReadonlyDeep<PortfolioSection>;
