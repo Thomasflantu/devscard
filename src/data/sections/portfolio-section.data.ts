@@ -64,7 +64,7 @@ const portfolioSectionData = {
       },
       screenshots: [
         { src: import('@/assets/portfolio/Quissteling/Schetsen.png'), alt: 'First screenshot' },
-        { src: import('@/assets/portfolio/Quissteling/QuisstelingWireframes2.0.pdf'), alt: 'Second screenshot' },
+      //  { src: import('@/assets/portfolio/Quissteling/QuisstelingWireframes2.0.pdf'), alt: 'Second screenshot' },
       ],
       links: [
         github({ url: 'https://github.com/tflantua/Quissteling' })
