@@ -88,11 +88,11 @@ export const webFlow = createSkillFactory({
   url: 'https://webflow.com/',
 });
 
-export const nx = createSkillFactory({
-  name: 'Nx',
-  icon: 'simple-icons:nx',
-  iconColor: '#143055',
-  url: 'https://nx.dev/',
+export const androidStudio = createSkillFactory({
+  name: 'Android studio',
+  icon: 'simple-icons:androidstudio',
+  iconColor: '#3DDC84',
+  url: 'https://developer.android.com/studio',
 });
 
 export const googleCloud = createSkillFactory({

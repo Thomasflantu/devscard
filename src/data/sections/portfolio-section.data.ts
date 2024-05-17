@@ -1,7 +1,7 @@
 import type { PortfolioSection } from '@/types/sections/portfolio-section.types';
 import type { ReadonlyDeep } from 'type-fest';
 import { demo, github, mockups, website } from '../helpers/links';
-import { azure, linuxUbuntu } from '../helpers/skills';
+import { C, androidStudio, azure, intelliJ, java, linuxUbuntu, visualStudio, visualStudioCode } from '../helpers/skills';
 
 const portfolioSectionData = {
   config: {
@@ -17,10 +17,10 @@ const portfolioSectionData = {
   projects: [
     {
       name: 'EXR1 Autonamous driving',
-      image: import('@/assets/portfolio/project-1.jpeg'),
-      dates: [new Date('2020-03'), null],
+      image: import('@/assets/portfolio/EXRobotics/EXRobotics.jpeg'),
+      dates: [new Date('2023-02'), new Date('2023-06')],
       details: [
-        { label: 'Team deelnemers', value: '4 personen' },
+        { label: 'Team', value: '4 personen' },
         { label: 'Mijn rol', value: ['Infrastructuur', 'Planner'] },
         { label: 'Bedrijf', value: 'EXRobotics' },
         { label: 'Catogorie', value: ['Datastructuur', 'Robotics', 'School'] },
@@ -34,32 +34,41 @@ const portfolioSectionData = {
       tagsList: {
         title: 'Technologies',
         //TODO add some technologies to the tags
-        tags: [azure(), linuxUbuntu()],
+        tags: [azure(), linuxUbuntu(), visualStudioCode()],
       },
       links: [website({url: 'https://www.exrobotics.global/news-publications/exr-1-available-in-the-shell-gtc'})],
     },
     {
-      name: 'TruQuest',
+      name: 'Quissteling',
       image: import('@/assets/portfolio/project-2.jpeg'),
-      dates: [new Date('2019-06'), new Date('2020-02')],
+      dates: [new Date('2021-04'), new Date('2021-06')],
       details: [
-        { label: 'Team size', value: '7 people' },
-        { label: 'My role', value: ['Front-end Developer', 'Mobile Developer', 'Designer'] },
-        { label: 'Company', value: 'Facebook' },
-        { label: 'Category', value: ['Web app', 'Mobile app'] },
+        { label: 'Team', value: '5 mensen' },
+        { label: 'Mijn rol', value: ['Front-end Developer', 'Telefoon Developer', 'UX-Designer'] },
+        { label: 'Bedrijf', value: 'Essteling (een verzonnen bedrijf van Avans)'},
+        { label: 'Catagorie', value: ['Telefoon applicatie', 'UX designing', 'School'] },
       ],
       pdfDetails: [
-        { label: 'Demo', value: 'https://tru-quest-ck7ea3.netlify.app', url: '#' },
-        { label: 'Repository', value: 'https://github.com/mark-freeman/tru-quest', url: '#' },
+        { label: 'Repository', value: 'https://github.com/tflantua/Quissteling', url: 'https://github.com/tflantua/Quissteling' },
       ],
       description:
-        'Ut ultricies tortor at sodales aliquam. Vivamus metus ante, fringilla nec ligula in, suscipit rhoncus mauris. Praesent hendrerit velit odio, at accumsan urna faucibus convallis. Nunc at massa eget ligula volutpat dictum a sit amet libero. Vestibulum iaculis molestie maximus. In hac habitasse platea dictumst.',
+        'De Essteling is een welbekend attractiepark binnen heel Europa en het park staat goed aangeschreven vanwege haar ' + 
+        'gethematiseerde attracties. De Essteling richt zich op innovatie om een leidende positie in de markt te behouden. ' + 
+        'Dit doet het park door met nieuwe attracties te komen, maar daarnaast zoekt het park ook interactievere (en goedkopere) ' + 
+        'manieren om goed contact met haar bezoekers te kunnen behouden. Het park heeft daarom besloten om ons van Avans ' +
+        'in te huren om met een app te komen die met behulp van sensor(en) en actuator(en) een beleving creëert. ',
       tagsList: {
         title: 'Technologies',
         //TODO add some technologies to the tags
-        tags: [],
+        tags: [java(), C(), androidStudio()],
       },
-      links: [mockups({ url: '#' }), demo({ url: '#' })],
+      screenshots: [
+        { src: import('@/assets/portfolio/Quissteling/Schetsen.png'), alt: 'First screenshot' },
+        { src: import('@/assets/portfolio/Quissteling/QuisstelingWireframes2.0.pdf'), alt: 'Second screenshot' },
+      ],
+      links: [
+        github({ url: 'https://github.com/tflantua/Quissteling' })
+      ],
     },
     {
       name: 'Software Chasers',
@@ -72,8 +81,7 @@ const portfolioSectionData = {
         { label: 'Category', value: ['Web app', 'Open source'] },
       ],
       pdfDetails: [
-        { label: 'Demo', value: 'https://software-chasers-e82l8e.netlify.app', url: '#' },
-        { label: 'Repository', value: 'https://github.com/mark-freeman/software-chasers', url: '#' },
+        { label: 'Repository', value: 'https://github.com/tflantua/Quissteling', url: 'https://github.com/tflantua/Quissteling' },
       ],
       description:
         'Quisque id consectetur eros. In hac habitasse platea dictumst. Sed eu pulvinar orci. Mauris consequat, est in dignissim varius, neque nisl commodo mauris, id blandit risus justo eu nulla.',
