@@ -17,7 +17,7 @@ const experienceSectionData = {
       image: import('@/assets/logos/DirkVanDenBroek.webp'),
       dates: [new Date('2018-06'), null],
       description: `
-        - Ik ben hier begonnen als 16 jarig jongetje
+        - Ik ben hier begonnen als 16 jarig jongen
         - Tot de dag van vandaag werk ik er nog steeds
         - Ik doe veel met groente en fruit, hiervan leer ik ook weer nieuwe dingen
         - Ik heb geleerd hoe ik mensen kan aansturen en heb veel ervaring opgedaan met sociale interactie
