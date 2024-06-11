@@ -93,7 +93,7 @@ const portfolioSectionData = {
       description:
         'Bij dit project waren er 10 teamleden, de helft ging aan de plannen zitten voor het project en de andere helft zou bij ' +
         'de tweede periode aan de applicatie zitten, om deze te bouwen. Dit project was meer bedoeld als een goede overdracht ' +
-        'van de ideeen, dan het daadwerkelijk juist te realiseren',
+        'van de ideeen, dan het daadwerkelijk juist te realiseren.',
       tagsList: {
         title: 'Technologies',
         //TODO add some technologies to the tags
@@ -112,7 +112,7 @@ const portfolioSectionData = {
         { label: 'Catagorie', value: ['Telefoon applicatie', 'School'] },
       ],
       description:
-        'Dit is hetzelfde als de beschrijving bij het project Picum, alleen nu zat ik in de uitvoerdende partij',
+        'Dit is hetzelfde als de beschrijving bij het project Picum, alleen nu zat ik in de uitvoerdende partij.',
       tagsList: {
         title: 'Technologies',
         //TODO add some technologies to the tags
@@ -132,7 +132,7 @@ const portfolioSectionData = {
       ],
       description:
         'Dit is een website die wij als BijGepast op dit moment aan het bouwen zijn, hierbij vinden wij het belangrijk ' + 
-        'dat de website een rustige maar mooie uitstraling heeft',
+        'dat de website een rustige maar mooie uitstraling heeft.',
       tagsList: {
         title: 'Technologies',
         //TODO add some technologies to the tags
