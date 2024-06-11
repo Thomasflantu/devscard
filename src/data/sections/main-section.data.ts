@@ -21,7 +21,7 @@ const mainSectionData = {
     { label: 'Phone', value: '+31633089143' },
     { label: 'Email', value: 'thomas.flantua@gmail.com' },
     { label: 'LinkedIn', value: '/in/thomas-flantua-3b543517b', url: 'https://linkedin.com' },
-    { label: 'Website', value: 'https://euphonious-queijadas-62a72f.netlify.app/#profile', url: '/', fullRow: true },
+    { label: 'Website', value: 'https://euphonious-queijadas-62a72f.netlify.app/#profile', url: 'https://euphonious-queijadas-62a72f.netlify.app/#profile', fullRow: true },
   ],
   description:
   'Een hardwerkende student. Wilt zijn vaardigheden en passie inzetten om de missie van een onderneming vorm te geven. ' + 
