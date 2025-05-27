@@ -1,7 +1,7 @@
 import type { ExperienceSection } from '@/types/sections/experience-section.types';
 import type { ReadonlyDeep } from 'type-fest';
 import { facebook, github, instagram, linkedin, twitter, website } from '../helpers/links';
-import { azure, azureDevOps, flutter, googleCloud, visualStudio, visualStudioCode, webFlow } from '../helpers/skills';
+import { azure, azureDevOps, blazor, cSharp, docker, dotNet, flutter, googleCloud, googlenet, jira, pytorch, radzen, tesseract, visualStudio, visualStudioCode, webFlow, yolov8 } from '../helpers/skills';
 
 const experienceSectionData = {
   config: {
@@ -29,6 +29,25 @@ const experienceSectionData = {
         tags: [],
       },
       links: [],
+    },
+    {
+      role: 'Stagair',
+      company: 'Optimation',
+      image: import('@/assets/logos/optimationbv_logo.jpg'),
+      dates: [new Date('2025-02'), new Date('2025-07')],
+      description: `
+        - Ik ben hier begonnen als 16 jarig jongen
+        - Tot de dag van vandaag werk ik er nog steeds
+        - Ik doe veel met groente en fruit, hiervan leer ik ook weer nieuwe dingen
+        - Ik heb geleerd hoe ik mensen kan aansturen en heb veel ervaring opgedaan met sociale interactie
+        - Ik ben nog steeds veel aan het leren van mijn managers bij de Dirk
+      `,
+      tagsList: {
+        title: 'Technologies',
+        //TODO add some technologies to the tags
+        tags: [dotNet(), visualStudio(), cSharp(), blazor(), radzen(), pytorch(), tesseract(), yolov8(), docker(), jira(), googlenet()],
+      },
+      links: [website({ url: 'https://www.abf.store/s/en/' })],
     },
     {
       role: 'Stagair',

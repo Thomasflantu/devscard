@@ -164,3 +164,88 @@ export const linuxUbuntu = createSkillFactory({
   iconColor: '#E95420',
   url: 'https://ubuntu.com/',
 });
+
+export const blazor = createSkillFactory({
+  name: 'Blazor',
+  icon: 'simple-icons:blazor',
+  iconColor: '#512BD4',
+  url: 'https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor',
+});
+
+export const radzen = createSkillFactory({
+  name: 'Radzen',
+  icon: 'simple-icons:radzen',
+  iconColor: '#0C7CD5',
+  url: 'https://www.radzen.com/',
+});
+
+export const pytorch = createSkillFactory({
+  name: 'PyTorch',
+  icon: 'simple-icons:pytorch',
+  iconColor: '#EE4C2C',
+  url: 'https://pytorch.org/',
+});
+
+export const tesseract = createSkillFactory({
+  name: 'Tesseract OCR',
+  icon: 'simple-icons:tesseract',
+  iconColor: '#4285F4',
+  url: 'https://github.com/tesseract-ocr/tesseract',
+});
+
+export const yolov8 = createSkillFactory({
+  name: 'YOLOv8',
+  icon: 'simple-icons:ultralytics',
+  iconColor: '#FFDD00',
+  url: 'https://docs.ultralytics.com/',
+});
+
+export const onnxRuntime = createSkillFactory({
+  name: 'ONNX Runtime',
+  icon: 'simple-icons:onnx',
+  iconColor: '#005CED',
+  url: 'https://onnxruntime.ai/',
+});
+
+export const opencv = createSkillFactory({
+  name: 'OpenCV',
+  icon: 'simple-icons:opencv',
+  iconColor: '#5C3EE8',
+  url: 'https://opencv.org/',
+});
+
+export const docker = createSkillFactory({
+  name: 'Docker',
+  icon: 'simple-icons:docker',
+  iconColor: '#2496ED',
+  url: 'https://www.docker.com/',
+});
+
+export const bitbucket = createSkillFactory({
+  name: 'Bitbucket',
+  icon: 'simple-icons:bitbucket',
+  iconColor: '#205081',
+  url: 'https://bitbucket.org/',
+});
+
+export const jira = createSkillFactory({
+  name: 'Jira',
+  icon: 'simple-icons:jira',
+  iconColor: '#0052CC',
+  url: 'https://www.atlassian.com/software/jira',
+});
+
+export const scrum = createSkillFactory({
+  name: 'Scrum',
+  icon: 'simple-icons:scrumalliance',
+  iconColor: '#6DB33F',
+  url: 'https://www.scrum.org/resources/what-is-scrum',
+});
+
+export const googlenet = createSkillFactory({
+  name: 'GoogLeNet',
+  icon: 'simple-icons:googlegemini', // geen officiële GoogLeNet icon, dit is alternatief
+  iconColor: '#34A853',
+  url: 'https://en.wikipedia.org/wiki/GoogLeNet',
+});
+
