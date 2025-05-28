@@ -36,11 +36,9 @@ const experienceSectionData = {
       image: import('@/assets/logos/optimationbv_logo.jpg'),
       dates: [new Date('2025-02'), new Date('2025-07')],
       description: `
-        - Ik ben hier begonnen als 16 jarig jongen
-        - Tot de dag van vandaag werk ik er nog steeds
-        - Ik doe veel met groente en fruit, hiervan leer ik ook weer nieuwe dingen
-        - Ik heb geleerd hoe ik mensen kan aansturen en heb veel ervaring opgedaan met sociale interactie
-        - Ik ben nog steeds veel aan het leren van mijn managers bij de Dirk
+        - Werkte aan een geautomatiseerd systeem voor het uitlezen van elektrotechnische schema’s met machine learning.
+        - Ontwikkelde een modulaire oplossing met .NET, Python en Docker.
+        - Leerde werken met CI/CD, Jira en code reviews in een professionele DevOps-omgeving.
       `,
       tagsList: {
         title: 'Technologies',
