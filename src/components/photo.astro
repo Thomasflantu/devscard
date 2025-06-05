@@ -10,16 +10,21 @@ export interface Props {
   height?: number;
 }
 
-const { src, ...props } = Astro.props;
+const { src, class: className = '', ...props } = Astro.props;
 
 const isRemoteImage = typeof src === 'string';
 const loading = import.meta.env.PUBLIC_APP_ENV === 'snapshot' ? 'eager' : 'lazy';
 ---
 
-{
-  isRemoteImage ? (
-    <img src={src} {...props} />
-  ) : (
-    <Image format="webp" fit="cover" src={src} loading={loading} {...props} />
-  )
-}
+{isRemoteImage ? (
+  <img src={src} class={`object-cover ${className}`} {...props} />
+) : (
+  <Image
+    src={src}
+    loading={loading}
+    fit="cover"
+    format="webp"
+    class={`object-cover ${className}`}
+    {...props}
+  />
+)}
