@@ -69,7 +69,7 @@ export const flutter = createSkillFactory({
 
 export const avalonia = createSkillFactory({
   name: 'Avalonia',
-  icon: 'simple-icons:avalonia',
+  icon: 'simple-icons:flutter',
   iconColor: '#944DD6',
   url: 'https://avaloniaui.net/',
 });

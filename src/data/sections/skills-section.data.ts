@@ -1,6 +1,6 @@
 import type { SkillsSection } from '@/types/sections/skills-section.types';
 import type { ReadonlyDeep } from 'type-fest';
-import { C, astro, azure, cSharp, dotNet, firebase, flutter, googleCloud, intelliJ, java, kotlin, nodeJs, postgreSql, react, typescript, visualStudio, visualStudioCode, webFlow } from '../helpers/skills';
+import { C, astro, avalonia, azure, cSharp, dotNet, firebase, flutter, googleCloud, intelliJ, java, kotlin, nodeJs, postgreSql, react, typescript, visualStudio, visualStudioCode, webFlow } from '../helpers/skills';
 
 const skillsSectionData = {
   config: {
@@ -28,19 +28,22 @@ const skillsSectionData = {
         kotlin({level: 4}),
         dotNet({level: 3}),
         nodeJs({level: 3}),
-        webFlow({level: 3, description: 'Op dit moment gebruik ik webflow met mijn eigen bedrijf BijGepast ' + 
+        webFlow({level: 3, description: 'Op dit moment gebruik ik webflow met mijn eigen bedrijf BijGepast ' +
         'https://bijgepast.com'}),
         googleCloud({level: 2}),
         azure({level: 3}),
         visualStudioCode({level: 4, description: 'Deze tool gebruik ik vooral tegenwoordig'}),
         visualStudio({level: 2, description: 'Deze tool heb ik gebruikt tijdens mijn stage bij ABF'}),
-        intelliJ({level: 4, description: 'Deze tool heb ik veel gebruikt op school in de eerste 2 jaar'})
+        intelliJ({level: 4, description: 'Deze tool heb ik veel gebruikt op school in de eerste 2 jaar'}),
+        avalonia({level: 1, description: 'Ik heb Avalonia gebruikt tijdens mijn werk bij Optimation om desktop applicaties te maken'}),
+        astro({level: 2, description: 'Ik heb Astro gebruikt om deze website te maken'}),
       ],
     },
     {
       title: 'Wat ik nog wil leren',
-      skills: [astro({description: 'De website is gemaakt met Astro, maar persoonlijk weet ik er nog niet veel over, '+ 
-      'dus zou ik er graag meer over willen leren'})],
+      skills: [
+        /* Add skills you want to learn here using the skill() helper */
+      ],
     },
     {
       title: 'Welke talen ik spreek',
