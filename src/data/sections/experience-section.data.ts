@@ -31,7 +31,7 @@ const experienceSectionData = {
   },
   jobs: [
     {
-      role: 'Software Engineer',
+      role: 'Junior software-ingenieur',
       company: 'Optimation',
       image: import('@/assets/logos/optimationbv_logo.jpg'),
       dates: [new Date('2025-08'), null],

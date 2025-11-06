@@ -46,11 +46,11 @@ const skillsSectionData = {
         postgreSql({ level: 1 }),
         firebase({ level: 1 }),
         C({ level: 2 }),
-        cSharp({ level: 2 }),
+        cSharp({ level: 4 }),
         java({ level: 5 }),
         flutter({ level: 3 }),
         kotlin({ level: 4 }),
-        dotNet({ level: 3 }),
+        dotNet({ level: 5 }),
         nodeJs({ level: 3 }),
         webFlow({
           level: 3,
