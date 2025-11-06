@@ -67,13 +67,6 @@ export const flutter = createSkillFactory({
   url: 'https://flutter.dev/',
 });
 
-export const avalonia = createSkillFactory({
-  name: 'Flutter',
-  icon: 'simple-icons:flutter',
-  iconColor: '#02569B',
-  url: 'https://flutter.dev/',
-});
-
 export const dotNet = createSkillFactory({
   name: '.NET',
   icon: 'simple-icons:dotnet',
@@ -93,6 +86,41 @@ export const webFlow = createSkillFactory({
   icon: 'simple-icons:webflow',
   iconColor: '#146EF5',
   url: 'https://webflow.com/',
+});
+
+export const avalonia = createSkillFactory({
+  name: 'Avalonia',
+  icon: 'simple-icons:avaloniaui',
+  iconColor: '##165BFF',
+  url: 'https://avaloniaui.net/',
+});
+
+export const domainDrivenDesign = createSkillFactory({
+  name: 'Domain Driven Design',
+  icon: 'simple-icons:bookstack',
+  iconColor: '#4A4A4A',
+  url: 'https://www.bergler.nl/domain-driven-design-in-gewoon-nederlands-artikel-2-het-model',
+});
+
+export const eventDrivenArchitecture = createSkillFactory({
+  name: 'Event-Driven Architecture',
+  icon: 'mdi:arrow-decision-auto', // werkt, conceptueel symbool
+  iconColor: '#007ACC',
+  url: 'https://medium.com/@seetharamugn/the-complete-guide-to-event-driven-architecture-b25226594227',
+});
+
+export const bpmn = createSkillFactory({
+  name: 'BPMN',
+  icon: 'simple-icons:miro', // staat symbool voor procesmodel tooling
+  iconColor: '#FFD02F',
+  url: 'https://leansixsigmagroep.nl/lean-agile-en-six-sigma/bpmn-business-processing-model-notation/?srsltid=AfmBOopgooxNOos0I5D9KmYkJfLBQdH0DONj_6-Gdf-yL1HTwI3vsimr',
+});
+
+export const businessAnalysis = createSkillFactory({
+  name: 'Business Analysis',
+  icon: 'mdi:account-tie',
+  iconColor: '#007ACC',
+  url: 'https://www.iiba.org/professional-development/career-centre/what-is-business-analysis',
 });
 
 export const androidStudio = createSkillFactory({
@@ -255,4 +283,3 @@ export const googlenet = createSkillFactory({
   iconColor: '#34A853',
   url: 'https://en.wikipedia.org/wiki/GoogLeNet',
 });
-

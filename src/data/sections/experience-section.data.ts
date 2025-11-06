@@ -1,7 +1,26 @@
 import type { ExperienceSection } from '@/types/sections/experience-section.types';
 import type { ReadonlyDeep } from 'type-fest';
 import { facebook, github, instagram, linkedin, twitter, website } from '../helpers/links';
-import { avalonia, azure, azureDevOps, blazor, cSharp, docker, dotNet, flutter, googleCloud, googlenet, jira, pytorch, radzen, tesseract, visualStudio, visualStudioCode, webFlow, yolov8 } from '../helpers/skills';
+import {
+  avalonia,
+  azure,
+  azureDevOps,
+  blazor,
+  cSharp,
+  docker,
+  dotNet,
+  flutter,
+  googleCloud,
+  googlenet,
+  jira,
+  pytorch,
+  radzen,
+  tesseract,
+  visualStudio,
+  visualStudioCode,
+  webFlow,
+  yolov8,
+} from '../helpers/skills';
 
 const experienceSectionData = {
   config: {
@@ -25,13 +44,13 @@ const experienceSectionData = {
         title: 'Technologies',
         tags: [dotNet(), visualStudio(), cSharp(), blazor(), radzen(), docker(), jira(), avalonia()],
       },
-      links: [website({ url: 'https://www.abf.store/s/en/' })],
+      links: [website({ url: 'https://optimation.nl' })],
     },
     {
       role: 'AGF medewerker',
       company: 'Dirk van den broek',
       image: import('@/assets/logos/DirkVanDenBroek.webp'),
-      dates: [new Date('2018-06'), new Date("2025-08")],
+      dates: [new Date('2018-06'), new Date('2025-08')],
       description: `
         - Ik ben hier begonnen als 16 jarig jongen
         - Tot de dag van vandaag werk ik er nog steeds
@@ -39,6 +58,10 @@ const experienceSectionData = {
         - Ik heb geleerd hoe ik mensen kan aansturen en heb veel ervaring opgedaan met sociale interactie
         - Ik heb veel aan het leren van mijn managers bij de Dirk
       `,
+      tagsList: {
+        //TODO add some technologies to the tags
+        tags: [],
+      },
       links: [],
     },
     {
@@ -54,9 +77,21 @@ const experienceSectionData = {
       tagsList: {
         title: 'Technologies',
         //TODO add some technologies to the tags
-        tags: [dotNet(), visualStudio(), cSharp(), blazor(), radzen(), pytorch(), tesseract(), yolov8(), docker(), jira(), googlenet()],
+        tags: [
+          dotNet(),
+          visualStudio(),
+          cSharp(),
+          blazor(),
+          radzen(),
+          pytorch(),
+          tesseract(),
+          yolov8(),
+          docker(),
+          jira(),
+          googlenet(),
+        ],
       },
-      links: [website({ url: 'https://www.abf.store/s/en/' })],
+      links: [website({ url: 'https://optimation.nl' })],
     },
     {
       role: 'Stagair',
@@ -96,7 +131,7 @@ const experienceSectionData = {
         //TODO add some technologies to the tags
         tags: [webFlow(), flutter(), visualStudioCode()],
       },
-      links: [website({ url: 'https://www-bijgepast-com.webflow.io/' }),],
+      links: [website({ url: 'https://www-bijgepast-com.webflow.io/' })],
     },
   ],
 } as const satisfies ReadonlyDeep<ExperienceSection>;
