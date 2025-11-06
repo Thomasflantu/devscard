@@ -67,6 +67,13 @@ export const flutter = createSkillFactory({
   url: 'https://flutter.dev/',
 });
 
+export const avalonia = createSkillFactory({
+  name: 'Avalonia',
+  icon: 'simple-icons:avalonia',
+  iconColor: '#944DD6',
+  url: 'https://avaloniaui.net/',
+});
+
 export const dotNet = createSkillFactory({
   name: '.NET',
   icon: 'simple-icons:dotnet',

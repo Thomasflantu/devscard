@@ -1,7 +1,7 @@
 import type { ExperienceSection } from '@/types/sections/experience-section.types';
 import type { ReadonlyDeep } from 'type-fest';
 import { facebook, github, instagram, linkedin, twitter, website } from '../helpers/links';
-import { azure, azureDevOps, blazor, cSharp, docker, dotNet, flutter, googleCloud, googlenet, jira, pytorch, radzen, tesseract, visualStudio, visualStudioCode, webFlow, yolov8 } from '../helpers/skills';
+import { avalonia, azure, azureDevOps, blazor, cSharp, docker, dotNet, flutter, googleCloud, googlenet, jira, pytorch, radzen, tesseract, visualStudio, visualStudioCode, webFlow, yolov8 } from '../helpers/skills';
 
 const experienceSectionData = {
   config: {
@@ -12,22 +12,33 @@ const experienceSectionData = {
   },
   jobs: [
     {
+      role: 'Software Engineer',
+      company: 'Optimation',
+      image: import('@/assets/logos/optimationbv_logo.jpg'),
+      dates: [new Date('2025-08'), null],
+      description: `
+            - Ontwikkelt en onderhoudt het Optima Platform: een modulair ecosysteem voor paneelbouw-automatisering.
+            - Bouwt microservices in .NET en C#, met front-ends in Blazor en Avalonia voor industriële toepassingen.
+            - Beheert Docker-gebaseerde productieomgevingen op Linux (Swarm), inclusief CI/CD-pijplijnen en versiebeheer.
+      `,
+      tagsList: {
+        title: 'Technologies',
+        tags: [dotNet(), visualStudio(), cSharp(), blazor(), radzen(), docker(), jira(), avalonia()],
+      },
+      links: [website({ url: 'https://www.abf.store/s/en/' })],
+    },
+    {
       role: 'AGF medewerker',
       company: 'Dirk van den broek',
       image: import('@/assets/logos/DirkVanDenBroek.webp'),
-      dates: [new Date('2018-06'), null],
+      dates: [new Date('2018-06'), new Date("2025-08")],
       description: `
         - Ik ben hier begonnen als 16 jarig jongen
         - Tot de dag van vandaag werk ik er nog steeds
         - Ik doe veel met groente en fruit, hiervan leer ik ook weer nieuwe dingen
         - Ik heb geleerd hoe ik mensen kan aansturen en heb veel ervaring opgedaan met sociale interactie
-        - Ik ben nog steeds veel aan het leren van mijn managers bij de Dirk
+        - Ik heb veel aan het leren van mijn managers bij de Dirk
       `,
-      tagsList: {
-        title: 'Vulploegmedewerker',
-        //TODO add some technologies to the tags
-        tags: [],
-      },
       links: [],
     },
     {
