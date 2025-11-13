@@ -11,7 +11,7 @@ const mainSectionData = {
   },
   image: import('@/assets/HeadImage_CV.jpg'),
   fullName: 'Thomas Flantua',
-  role: 'Student Technische Informatica aan Breda Avans',
+  role: 'Junior Software ingenieur',
   details: [
     { label: 'Phone', value: '+31633089143', url: 'tel:' + '+31633089143' },
     { label: 'Email', value: 'thomas.flantua@gmail.com', url: 'mailto:' + 'thomas.flantua@gmail.com' },
@@ -21,12 +21,17 @@ const mainSectionData = {
     { label: 'Phone', value: '+31633089143' },
     { label: 'Email', value: 'thomas.flantua@gmail.com' },
     { label: 'LinkedIn', value: '/in/thomas-flantua-3b543517b', url: 'https://linkedin.com' },
-    { label: 'Website', value: 'https://euphonious-queijadas-62a72f.netlify.app/#profile', url: 'https://euphonious-queijadas-62a72f.netlify.app/#profile', fullRow: true },
+    {
+      label: 'Website',
+      value: 'https://euphonious-queijadas-62a72f.netlify.app/#profile',
+      url: 'https://euphonious-queijadas-62a72f.netlify.app/#profile',
+      fullRow: true,
+    },
   ],
   description:
-  'Een hardwerkende student. Wilt zijn vaardigheden en passie inzetten om de missie van een onderneming vorm te geven. ' +
-  ' Bedreven in het omgaan met technologie, waaronder diverse sociaal-mediaplatforms en office-programma’s. ' +
-  'Beschikt over gevorderde computervaardigheden. Heeft een positieve attitude en is bereid en gemotiveerd om nieuwe programma’s te leren beheersen.',
+    'Een hardwerkende ingenieur. Wilt zijn vaardigheden en passie inzetten om de missie van een onderneming vorm te geven. ' +
+    ' Bedreven in het omgaan met technologie, waaronder diverse sociaal-mediaplatforms en office-programma’s. ' +
+    'Beschikt over gevorderde computervaardigheden. Heeft een positieve attitude en is bereid en gemotiveerd om nieuwe programma’s te leren beheersen.',
   tags: [],
   action: {
     label: 'Download CV',
