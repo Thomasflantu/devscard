@@ -20,6 +20,10 @@ import {
   visualStudioCode,
   webFlow,
   yolov8,
+  python,
+  linuxUbuntu,
+  bitbucket,
+  scrum,
 } from '../helpers/skills';
 
 const experienceSectionData = {
@@ -42,7 +46,19 @@ const experienceSectionData = {
       `,
       tagsList: {
         title: 'Technologies',
-        tags: [dotNet(), visualStudio(), cSharp(), blazor(), radzen(), docker(), jira(), avalonia()],
+        tags: [
+          dotNet(),
+          cSharp(),
+          blazor(),
+          radzen(),
+          avalonia(),
+          docker(),
+          linuxUbuntu(),
+          azureDevOps(),
+          bitbucket(),
+          jira(),
+          visualStudio(),
+        ],
       },
       links: [website({ url: 'https://optimation.nl' })],
     },
@@ -79,16 +95,17 @@ const experienceSectionData = {
         //TODO add some technologies to the tags
         tags: [
           dotNet(),
-          visualStudio(),
           cSharp(),
           blazor(),
           radzen(),
+          python(),
           pytorch(),
           tesseract(),
           yolov8(),
+          googlenet(),
           docker(),
           jira(),
-          googlenet(),
+          visualStudio(),
         ],
       },
       links: [website({ url: 'https://optimation.nl' })],
@@ -108,7 +125,7 @@ const experienceSectionData = {
       tagsList: {
         title: 'Technologies',
         //TODO add some technologies to the tags
-        tags: [azure(), azureDevOps(), googleCloud(), visualStudio()],
+        tags: [azure(), azureDevOps(), googleCloud(), linuxUbuntu(), visualStudio()],
       },
       links: [website({ url: 'https://www.abf.store/s/en/' })],
     },

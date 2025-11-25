@@ -123,6 +123,83 @@ export const businessAnalysis = createSkillFactory({
   url: 'https://www.iiba.org/professional-development/career-centre/what-is-business-analysis',
 });
 
+export const python = createSkillFactory({
+  name: 'Python',
+  icon: 'simple-icons:python',
+  iconColor: '#3776AB',
+  url: 'https://www.python.org/',
+});
+
+export const git = createSkillFactory({
+  name: 'Git',
+  icon: 'simple-icons:git',
+  iconColor: '#F05032',
+  url: 'https://git-scm.com/',
+});
+
+export const github = createSkillFactory({
+  name: 'GitHub',
+  icon: 'simple-icons:github',
+  iconColor: '#181717',
+  url: 'https://github.com/',
+});
+
+export const kubernetes = createSkillFactory({
+  name: 'Kubernetes',
+  icon: 'simple-icons:kubernetes',
+  iconColor: '#326CE5',
+  url: 'https://kubernetes.io/',
+});
+
+export const terraform = createSkillFactory({
+  name: 'Terraform',
+  icon: 'simple-icons:terraform',
+  iconColor: '#844FBA',
+  url: 'https://www.terraform.io/',
+});
+
+export const bicep = createSkillFactory({
+  name: 'Bicep',
+  icon: 'mdi:code-brackets',
+  iconColor: '#008AD7',
+  url: 'https://learn.microsoft.com/azure/azure-resource-manager/bicep/',
+});
+
+export const kong = createSkillFactory({
+  name: 'Kong (API Gateway)',
+  icon: 'simple-icons:kong',
+  iconColor: '#003459',
+  url: 'https://konghq.com/',
+});
+
+export const azureOpenAI = createSkillFactory({
+  name: 'Azure OpenAI',
+  icon: 'mdi:brain',
+  iconColor: '#0078D4',
+  url: 'https://learn.microsoft.com/azure/ai-services/openai/',
+});
+
+export const azureMachineLearning = createSkillFactory({
+  name: 'Azure Machine Learning',
+  icon: 'mdi:chart-bell-curve',
+  iconColor: '#0078D4',
+  url: 'https://learn.microsoft.com/azure/machine-learning/',
+});
+
+export const langChain = createSkillFactory({
+  name: 'LangChain',
+  icon: 'mdi:link-variant',
+  iconColor: '#3B82F6',
+  url: 'https://www.langchain.com/',
+});
+
+export const langGraph = createSkillFactory({
+  name: 'LangGraph',
+  icon: 'mdi:graph-outline',
+  iconColor: '#6366F1',
+  url: 'https://langchain-ai.github.io/langgraph/',
+});
+
 export const androidStudio = createSkillFactory({
   name: 'Android studio',
   icon: 'simple-icons:androidstudio',
