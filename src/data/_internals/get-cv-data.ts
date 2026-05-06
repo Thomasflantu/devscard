@@ -1,13 +1,15 @@
-import type { ReadonlyDeep } from 'type-fest';
 import type { Data } from '@/types/data';
+import type { SiteLocale } from '../locales';
 import transformData from './transform-data';
-import configData from '../config';
-import sectionsData from '../sections';
+import getConfig from '../config';
+import getSections from '../sections';
+import { defaultLocale } from '../locales';
+import type { DataTransformer } from './transformers';
 
-const data = { config: configData, sections: sectionsData } as const satisfies ReadonlyDeep<Data>;
-
-export type PreciseData = typeof data;
-
-const getCvData = transformData(data);
+const getCvData = (locale: SiteLocale = defaultLocale, ...callbacks: DataTransformer[]): Data =>
+  transformData({
+    config: getConfig(locale),
+    sections: getSections(locale),
+  })(...callbacks);
 
 export default getCvData;

@@ -1,20 +1,22 @@
 ---
 import type { DateRange } from '@/types/shared';
+import type { I18nConfig } from '@/types/config/i18n-config.types';
 import DateRangeTag from './date-range-tag.astro';
 
 export interface Props {
   title: string;
   subtitle?: string;
   dates: DateRange;
+  i18n: I18nConfig;
 }
 
-const { title, subtitle, dates } = Astro.props;
+const { title, subtitle, dates, i18n } = Astro.props;
 ---
 
 <div>
   <div class="flex items-start justify-between">
     <div class="text-lg font-extrabold text-gray-900">{title}</div>
-    <DateRangeTag class="mt-0.5" dates={dates} />
+    <DateRangeTag class="mt-0.5" dates={dates} i18n={i18n} />
   </div>
   {subtitle && <div class="text-md -mt-0.5 font-medium text-gray-700">{subtitle}</div>}
 </div>

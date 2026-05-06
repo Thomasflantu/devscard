@@ -5,27 +5,37 @@ import Icon from './icon.astro';
 <button
   id="theme-toggle"
   aria-label="Theme toggle"
-  class="fixed bottom-3 left-3 z-10 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 text-gray-400 shadow-xl transition focus:ring-primary-500 dark:bg-gray-600 dark:text-gray-200"
+  type="button"
+  data-tooltip="Toggle theme"
+  class="fixed bottom-3 left-3 z-10 inline-flex h-10 w-16 items-center rounded-full bg-white p-1 text-gray-500 shadow-xl ring-1 ring-black/5 transition focus:ring-primary-500 dark:bg-gray-700 dark:text-gray-100"
 >
-  <Icon class="block dark:hidden" name="ri:moon-fill" size={20} />
-  <Icon class="hidden dark:block" name="ri:sun-line" size={20} />
+  <span class="grid h-8 w-8 place-items-center rounded-full bg-gray-100 transition-transform dark:translate-x-6 dark:bg-gray-600">
+    <Icon class="block dark:hidden" name="ri:moon-fill" size={18} />
+    <Icon class="hidden dark:block" name="ri:sun-line" size={18} />
+  </span>
 </button>
 
-<script>
-  const themeToggle = document.getElementById('theme-toggle')!;
+<script is:inline>
+  const themeToggle = document.getElementById('theme-toggle');
+
+  const applyTheme = (theme) => {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+    themeToggle?.setAttribute('aria-pressed', String(theme === 'dark'));
+  };
 
   const toggleTheme = () => {
     const theme = localStorage.getItem('theme') ?? 'light';
     const newTheme = theme === 'light' ? 'dark' : 'light';
-    const themeMeta = document.getElementsByName('theme-color') as NodeListOf<HTMLMetaElement>;
+    const themeMeta = document.querySelector('meta[name="theme-color"]');
 
-    if (themeMeta[0]) {
-      themeMeta[0].content = newTheme === 'dark' ? '#1a202c' : '#ffffff';
+    if (themeMeta) {
+      themeMeta.setAttribute('content', newTheme === 'dark' ? '#111827' : '#f9fafb');
     }
 
-    document.documentElement.classList[newTheme === 'dark' ? 'add' : 'remove']('dark');
+    applyTheme(newTheme);
     localStorage.setItem('theme', newTheme);
   };
 
-  themeToggle.addEventListener('click', toggleTheme);
+  applyTheme(localStorage.getItem('theme') ?? (document.documentElement.classList.contains('dark') ? 'dark' : 'light'));
+  themeToggle?.addEventListener('click', toggleTheme);
 </script>

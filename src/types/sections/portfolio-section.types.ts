@@ -38,6 +38,20 @@ export interface Project {
   details: LabelledValue[];
 
   /**
+   * [WEB] Categories used by the portfolio filter controls.
+   */
+  categories?: string[];
+
+  /**
+   * [WEB] Short impact summary that explains your contribution and result.
+   */
+  impact?: {
+    contribution: string;
+    challenge: string;
+    result: string;
+  };
+
+  /**
    * [PDF] Labeled-value pairs that will be used in the PDF version of your resume.
    *
    * You can use it to add some links related to your project as those listed under the `links` property aren't used in the PDF.

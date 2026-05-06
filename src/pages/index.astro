@@ -1,5 +1,9 @@
 ---
 import Layout from '@/web/components/layout.astro';
+import CareerTimeline from '@/web/components/career-timeline.astro';
+import ContactCta from '@/web/components/contact-cta.astro';
+import HighlightCards from '@/web/components/highlight-cards.astro';
+import LanguageToggle from '@/web/components/language-toggle.astro';
 import Sidebar from '@/web/components/sidebar.astro';
 import ThemeToggle from '@/web/components/theme-toggle.astro';
 import MainSection from '@/web/sections/main/main-section.web.astro';
@@ -10,20 +14,25 @@ import EducationSection from '@/web/sections/education/education-section.web.ast
 import TestimonialsSection from '@/web/sections/testimonials/testimonials-section.web.astro';
 import FavoritesSection from '@/web/sections/favorites/favorites-section.web.astro';
 import cv from '@/data';
+import { defaultLocale } from '@/data/locales';
 
-const { config, sections } = cv();
+const { config, sections } = cv(defaultLocale);
 ---
 
 <Layout {...config} sections={sections}>
+  <LanguageToggle locale={defaultLocale} nlHref="/" enHref="/en/" className="fixed right-3 top-3 z-10" />
   <ThemeToggle />
   <main class="w-full max-w-5xl space-y-4 px-2 py-3 sm:space-y-6 sm:px-8 sm:py-12 lg:space-y-8 lg:py-20">
     <MainSection {...sections.main} />
+    <HighlightCards locale={defaultLocale} />
+    <CareerTimeline locale={defaultLocale} />
     <SkillsSection {...sections.skills} />
-    <ExperienceSection {...sections.experience} />
-    <PortfolioSection {...sections.portfolio} />
-    <EducationSection {...sections.education} />
+    <ExperienceSection {...sections.experience} i18n={config.i18n} />
+    <PortfolioSection {...sections.portfolio} i18n={config.i18n} />
+    <EducationSection {...sections.education} i18n={config.i18n} />
     <TestimonialsSection {...sections.testimonials} />
     <FavoritesSection {...sections.favorites} />
+    <ContactCta locale={defaultLocale} />
   </main>
   <Sidebar sections={sections} className="sticky top-8 mt-20" />
   <script src="../web/scripts/initialize-tooltips.ts"></script>

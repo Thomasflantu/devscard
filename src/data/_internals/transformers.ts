@@ -1,12 +1,11 @@
 import type { Data } from '@/types/data';
 import type { Draft } from 'immer';
-import type { PreciseData } from './get-cv-data';
 
 export type DraftData = Draft<Data>;
 
 export type DataTransformer = (draft: DraftData) => void;
 
-type Sections = PreciseData['sections'];
+type Sections = Data['sections'];
 
 type SectionKey = keyof Sections;
 

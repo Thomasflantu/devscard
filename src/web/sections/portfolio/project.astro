@@ -1,6 +1,7 @@
 ---
 import { nanoid } from 'nanoid';
 import type { PortfolioSection, Project } from '@/types/sections/portfolio-section.types';
+import type { I18nConfig } from '@/types/config/i18n-config.types';
 import Description from '@/web/components/description.astro';
 import LabelledValue from '@/web/components/labelled-value.astro';
 import LinkButton from '@/web/components/link-button.astro';
@@ -11,12 +12,28 @@ import Typography from '@/web/components/typography.astro';
 import Thumbnail from '@/web/components/thumbnail.astro';
 
 export interface Props extends Project {
+  i18n: I18nConfig;
   screenshotsConfig?: PortfolioSection['config']['screenshots'];
 }
 
-const { dates, description, details, image, links, name, tagsList, screenshots, screenshotsConfig } = Astro.props;
+const {
+  dates,
+  description,
+  details,
+  image,
+  impact,
+  links,
+  name,
+  tagsList,
+  screenshots,
+  screenshotsConfig,
+  i18n,
+} = Astro.props;
 
 const alt = `${name} project thumbnail`;
+const impactLabels = i18n.locale.code.startsWith('nl')
+  ? ['Bijdrage', 'Uitdaging', 'Resultaat']
+  : ['Contribution', 'Challenge', 'Result'];
 
 const galleryId = nanoid(8);
 const hasScreenshots = screenshots?.length && screenshots.length > 0;
@@ -33,7 +50,7 @@ const screenshotsTooltip = screenshotsConfig?.title || 'Screenshots';
           <div class="flex w-full justify-between">
             <div>
               <Typography variant="item-title">{name}</Typography>
-              <Timestamp dates={dates} />
+              <Timestamp dates={dates} i18n={i18n} />
             </div>
             <div class="flex gap-2">
               {links.map((link) => <LinkButton {...link} />)}
@@ -52,6 +69,22 @@ const screenshotsTooltip = screenshotsConfig?.title || 'Screenshots';
     </div>
     <Description content={description} class="col-span-3 col-start-1" />
   </div>
+  {
+    impact && (
+      <div class="grid gap-3 sm:grid-cols-3">
+        {[
+          [impactLabels[0], impact.contribution],
+          [impactLabels[1], impact.challenge],
+          [impactLabels[2], impact.result],
+        ].map(([label, text]) => (
+          <div class="rounded-lg bg-gray-50 p-3 dark:bg-gray-700/50">
+            <div class="text-xs font-extrabold uppercase text-gray-400 dark:text-gray-300">{label}</div>
+            <p class="mt-1 text-sm leading-relaxed text-gray-600 dark:text-gray-200">{text}</p>
+          </div>
+        ))}
+      </div>
+    )
+  }
   <TagsList {...tagsList} />
   <div class="hidden" id={galleryId}>
     {screenshots?.map((screenshot) => <Photo {...screenshot} />)}

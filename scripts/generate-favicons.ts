@@ -1,10 +1,12 @@
 import { favicons, config as faviconsConfig, FaviconFile, FaviconImage } from 'favicons';
-import config from '../src/data/config';
+import getConfig from '../src/data/config';
 import { mkdir, writeFile, rm } from 'fs/promises';
 import { existsSync } from 'fs';
+import { defaultLocale } from '../src/data/locales';
 
 const FAVICONS_DIR = './public/favicons';
 const ASTRO_FILE_PATH = './src/web/head/favicons.generated.astro';
+const config = getConfig(defaultLocale);
 
 const generateFavicons = () =>
   favicons(`.${config.meta.faviconPath}`, {

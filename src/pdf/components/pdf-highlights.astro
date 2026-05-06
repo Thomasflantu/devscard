@@ -1,0 +1,33 @@
+---
+import type { SiteLocale } from '@/data/locales';
+
+interface Props {
+  locale: SiteLocale;
+}
+
+const { locale } = Astro.props;
+
+const highlights =
+  locale === 'nl'
+    ? [
+        { title: '.NET & C#', text: 'Applicaties en services met een praktische engineering mindset.' },
+        { title: 'AI & OCR', text: 'Machine learning, schemaherkenning en beeldclassificatie.' },
+        { title: 'Ondernemend', text: 'Techniek combineren met klantgericht denken.' },
+      ]
+    : [
+        { title: '.NET & C#', text: 'Applications and services with a practical engineering mindset.' },
+        { title: 'AI & OCR', text: 'Machine learning, schematic recognition, and image classification.' },
+        { title: 'Entrepreneurial', text: 'Combining technology with customer-focused thinking.' },
+      ];
+---
+
+<div class="grid grid-cols-3 gap-3">
+  {
+    highlights.map((item) => (
+      <div class="rounded-lg bg-gray-50 px-3 py-2">
+        <div class="text-sm font-extrabold text-gray-900">{item.title}</div>
+        <div class="mt-1 text-[12px] leading-snug text-gray-600">{item.text}</div>
+      </div>
+    ))
+  }
+</div>

@@ -1,6 +1,9 @@
 ---
 import Fonts from '@/components/fonts.astro';
+import LanguageToggle from '@/web/components/language-toggle.astro';
 import Footer from '@/pdf/components/footer.astro';
+import PdfHighlights from '@/pdf/components/pdf-highlights.astro';
+import PdfTimeline from '@/pdf/components/pdf-timeline.astro';
 import EducationSection from '@/pdf/sections/education-section.pdf.astro';
 import ExperienceSection from '@/pdf/sections/experience-section.pdf.astro';
 import MainSection from '@/pdf/sections/main-section.pdf.astro';
@@ -8,8 +11,9 @@ import PortfolioSection from '@/pdf/sections/portfolio-section.pdf.astro';
 import SkillsSection from '@/pdf/sections/skills-section.pdf.astro';
 
 import cv from '@/data';
+import { defaultLocale } from '@/data/locales';
 
-const { config, sections } = cv();
+const { config, sections } = cv(defaultLocale);
 
 const shouldRenderSection = (section: keyof typeof sections) => sections[section] && sections[section].config.visible;
 ---
@@ -22,12 +26,19 @@ const shouldRenderSection = (section: keyof typeof sections) => sections[section
     <title>PDF preview</title>
     <Fonts />
   </head>
-  <body class="flex flex-col bg-white p-[10mm] print:p-0">
+  <body class="flex flex-col gap-4 bg-gray-50 p-[10mm] print:p-0">
+    <LanguageToggle locale={defaultLocale} nlHref="/pdf" enHref="/en/pdf" className="mb-4 self-end print:hidden" />
     {shouldRenderSection('main') && <MainSection {...sections.main} />}
+    <div class="rounded-2xl bg-white p-5 shadow-md">
+      <PdfHighlights locale={defaultLocale} />
+    </div>
+    <div class="rounded-2xl bg-white p-5 shadow-md">
+      <PdfTimeline locale={defaultLocale} />
+    </div>
     {shouldRenderSection('skills') && <SkillsSection {...sections.skills} />}
-    {shouldRenderSection('experience') && <ExperienceSection {...sections.experience} />}
-    {shouldRenderSection('portfolio') && <PortfolioSection {...sections.portfolio} />}
-    {shouldRenderSection('education') && <EducationSection {...sections.education} />}
+    {shouldRenderSection('experience') && <ExperienceSection {...sections.experience} i18n={config.i18n} />}
+    {shouldRenderSection('portfolio') && <PortfolioSection {...sections.portfolio} i18n={config.i18n} />}
+    {shouldRenderSection('education') && <EducationSection {...sections.education} i18n={config.i18n} />}
     {config.pdf?.footer && <Footer>{config.pdf.footer}</Footer>}
   </body>
 </html>

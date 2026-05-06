@@ -1,35 +1,45 @@
 ---
 import type { PortfolioSection } from '@/types/sections/portfolio-section.types';
-import DashedDivider from '../components/dashed-divider.astro';
+import type { I18nConfig } from '@/types/config/i18n-config.types';
 import Description from '../components/description.astro';
 import LabelledValue from '../components/labelled-value.astro';
 import ListItemHeading from '../components/list-item-heading.astro';
 import SectionHeading from '../components/section-heading.astro';
 import TagsList from '../components/tags-list.astro';
 
-export interface Props extends PortfolioSection {}
+export interface Props extends PortfolioSection {
+  i18n: I18nConfig;
+}
 
-const { config, projects } = Astro.props;
+const { config, projects, i18n } = Astro.props;
 ---
 
 <div>
   <SectionHeading>{config.title}</SectionHeading>
-  <div class="flex flex-col">
+  <div class="flex flex-col gap-3">
     {
-      projects.map(({ name, description, details, pdfDetails, tagsList, dates }) => () => (
-        <>
+      projects.map(({ name, description, details, impact, pdfDetails, tagsList, dates }) => () => (
+        <div class="rounded-2xl bg-white p-4 shadow-md">
           <div class="flex flex-col gap-2">
-            <ListItemHeading title={name} dates={dates} />
+            <ListItemHeading title={name} dates={dates} i18n={i18n} />
             <Description content={description} />
-            <div class="flex flex-col gap-1">
+            {
+              impact && (
+                <div class="grid grid-cols-3 gap-2">
+                  {[impact.contribution, impact.challenge, impact.result].map((text) => (
+                    <div class="rounded-lg bg-gray-50 px-2 py-1 text-[11px] leading-snug text-gray-600">{text}</div>
+                  ))}
+                </div>
+              )
+            }
+            <div class="flex flex-col gap-0.5">
               {(pdfDetails ?? details).map((detail) => (
                 <LabelledValue {...detail} />
               ))}
             </div>
             <TagsList {...tagsList} />
           </div>
-          <DashedDivider />
-        </>
+        </div>
       ))
     }
   </div>

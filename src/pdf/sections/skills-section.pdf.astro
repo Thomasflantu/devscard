@@ -9,36 +9,36 @@ const { config, skillSets } = Astro.props;
 
 <div>
   <SectionHeading>{config.title}</SectionHeading>
-  <div class="flex flex-col gap-5">
+  <div class="grid grid-cols-2 gap-4">
     {
       skillSets.map((skillSet) => (
-        <div>
+        <div class="rounded-2xl bg-white p-4 shadow-md">
           <div class="text-base font-extrabold text-gray-900">{skillSet.title}</div>
-          <div class="mt-2 flex flex-wrap gap-3.5 text-sm text-gray-700">
+          <div class="mt-3 flex flex-wrap gap-2 text-[12px] text-gray-700">
             {skillSet.skills.map((skill) => {
               if ('level' in skill) {
                 return (
-                  <div class="flex h-6 w-fit overflow-hidden rounded">
-                    <div class="flex items-center bg-gray-100 pl-2.5 pr-2 font-medium">{skill.name}</div>
-                    <div class="flex items-center bg-gray-200 pl-2 pr-2.5 font-normal">{skill.level}/5</div>
+                  <div class="flex h-6 w-fit overflow-hidden rounded-full bg-gray-100">
+                    <div class="flex items-center pl-2.5 pr-2 font-medium text-gray-700">{skill.name}</div>
+                    <div class="flex items-center bg-gray-200 pl-2 pr-2.5 font-semibold text-gray-600">{skill.level}/5</div>
                   </div>
                 );
               }
 
               if (skill.name.includes(' - ')) {
                 return (
-                  <div class="flex h-6 w-fit overflow-hidden rounded">
-                    <div class="flex items-center bg-gray-100 pl-2.5 pr-2 font-medium">
+                  <div class="flex h-6 w-fit overflow-hidden rounded-full bg-gray-100">
+                    <div class="flex items-center pl-2.5 pr-2 font-medium text-gray-700">
                       {skill.name.split(' - ')[0]}
                     </div>
-                    <div class="flex items-center bg-gray-200 pl-2 pr-2.5 font-normal">
+                    <div class="flex items-center bg-gray-200 pl-2 pr-2.5 font-normal text-gray-600">
                       {skill.name.split(' - ')[1]}
                     </div>
                   </div>
                 );
               }
 
-              return <div class="flex h-6 w-fit items-center rounded bg-gray-100 px-2.5 font-medium">{skill.name}</div>;
+              return <div class="flex h-6 w-fit items-center rounded-full bg-gray-100 px-2.5 font-medium text-gray-700">{skill.name}</div>;
             })}
           </div>
         </div>

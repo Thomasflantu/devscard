@@ -1,17 +1,81 @@
 ---
 import type { PortfolioSection } from '@/types/sections/portfolio-section.types';
+import type { I18nConfig } from '@/types/config/i18n-config.types';
 import DividedList from '@/web/components/divided-list.astro';
 import Divider from '@/web/components/divider.astro';
 import SectionCard from '@/web/components/section-card.astro';
 import Project from './project.astro';
 
-export interface Props extends PortfolioSection {}
+export interface Props extends PortfolioSection {
+  i18n: I18nConfig;
+}
 
-const { config, projects } = Astro.props;
+const { config, projects, i18n } = Astro.props;
+const categories = [...new Set(projects.flatMap((project) => project.categories ?? []))];
+const filterAllLabel = i18n.locale.code.startsWith('nl') ? 'Alles' : 'All';
 ---
 
 <SectionCard {...config}>
+  {
+    categories.length > 0 && (
+      <div class="flex flex-wrap gap-2" data-portfolio-filters>
+        <button
+          type="button"
+          data-filter="all"
+          aria-pressed="true"
+          class="rounded-md bg-primary-600 px-3 py-1.5 text-sm font-semibold text-white"
+        >
+          {filterAllLabel}
+        </button>
+        {categories.map((category) => (
+          <button
+            type="button"
+            data-filter={category}
+            aria-pressed="false"
+            class="rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold text-gray-600 transition hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+    )
+  }
   <DividedList>
-    {projects.flatMap((project) => [<Project {...project} screenshotsConfig={config.screenshots} />, <Divider />])}
+    {
+      projects.map((project) => (
+        <div data-project-categories={(project.categories ?? []).join('|')}>
+          <Project {...project} i18n={i18n} screenshotsConfig={config.screenshots} />
+          <Divider />
+        </div>
+      ))
+    }
   </DividedList>
 </SectionCard>
+
+<script is:inline>
+  const wrapper = document.querySelector('[data-portfolio-filters]');
+  const projects = [...document.querySelectorAll('[data-project-categories]')];
+
+  wrapper?.addEventListener('click', (event) => {
+    const button = event.target.closest('button[data-filter]');
+    if (!button) return;
+
+    const filter = button.dataset.filter;
+
+    wrapper.querySelectorAll('button[data-filter]').forEach((item) => {
+      const isActive = item === button;
+      item.setAttribute('aria-pressed', String(isActive));
+      item.classList.toggle('bg-primary-600', isActive);
+      item.classList.toggle('text-white', isActive);
+      item.classList.toggle('bg-gray-100', !isActive);
+      item.classList.toggle('text-gray-600', !isActive);
+      item.classList.toggle('dark:bg-gray-700', !isActive);
+      item.classList.toggle('dark:text-gray-200', !isActive);
+    });
+
+    projects.forEach((project) => {
+      const categories = project.getAttribute('data-project-categories')?.split('|') ?? [];
+      project.hidden = filter !== 'all' && !categories.includes(filter);
+    });
+  });
+</script>

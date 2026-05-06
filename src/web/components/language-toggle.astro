@@ -1,0 +1,43 @@
+---
+import type { SiteLocale } from '@/data/locales';
+
+interface Props {
+  locale: SiteLocale;
+  nlHref: string;
+  enHref: string;
+  className?: string;
+}
+
+const { locale, nlHref, enHref, className } = Astro.props;
+
+const links = [
+  { href: nlHref, label: 'NL', lang: 'nl' as const },
+  { href: enHref, label: 'EN', lang: 'en' as const },
+];
+---
+
+<nav
+  aria-label="Language toggle"
+  class:list={[
+    'inline-flex items-center overflow-hidden rounded-lg border border-gray-200 bg-white/95 shadow-lg backdrop-blur dark:border-gray-700 dark:bg-gray-800/95',
+    className,
+  ]}
+>
+  {
+    links.map(({ href, label, lang }) => (
+      <a
+        href={href}
+        hreflang={lang}
+        aria-current={locale === lang ? 'page' : undefined}
+        class:list={[
+          'px-3 py-2 text-sm font-semibold transition',
+          locale === lang
+            ? 'bg-primary-600 text-white'
+            : 'text-gray-600 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700',
+        ]}
+      >
+        {label}
+      </a>
+    ))
+  }
+</nav>

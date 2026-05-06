@@ -1,7 +1,7 @@
 import type { FavoritesSection } from '@/types/sections/favorites-section.types';
-import type { ReadonlyDeep } from 'type-fest';
+import type { SiteLocale } from '../locales';
 
-const favoritesSectionData = {
+const getFavoritesSectionData = (_locale: SiteLocale = 'nl'): FavoritesSection => ({
   config: {
     title: 'My favorites',
     slug: 'favorites',
@@ -133,6 +133,6 @@ const favoritesSectionData = {
       },
     ],
   },
-} as const satisfies ReadonlyDeep<FavoritesSection>;
+});
 
-export default favoritesSectionData;
+export default getFavoritesSectionData;

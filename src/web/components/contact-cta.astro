@@ -1,0 +1,41 @@
+---
+import type { SiteLocale } from '@/data/locales';
+import LinkButton from './link-button.astro';
+
+interface Props {
+  locale: SiteLocale;
+}
+
+const { locale } = Astro.props;
+
+const copy =
+  locale === 'nl'
+    ? {
+        title: 'Laten we kennismaken',
+        text: 'Nieuwsgierig naar mijn werk of wil je iets bespreken? Ik reageer graag via e-mail of LinkedIn.',
+        mail: 'Mail mij',
+      }
+    : {
+        title: "Let's connect",
+        text: "Curious about my work or want to discuss an opportunity? I'm happy to talk by email or LinkedIn.",
+        mail: 'Email me',
+      };
+---
+
+<section class="rounded-2xl bg-gray-900 p-8 text-white shadow-md dark:bg-gray-100 dark:text-gray-900">
+  <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+    <div>
+      <h2 class="text-2xl font-extrabold">{copy.title}</h2>
+      <p class="mt-2 max-w-2xl text-sm leading-relaxed text-gray-300 dark:text-gray-600">{copy.text}</p>
+    </div>
+    <div class="flex items-center gap-3">
+      <a
+        href="mailto:thomas.flantua@gmail.com"
+        class="inline-flex h-10 items-center rounded-md bg-primary-600 px-4 text-base font-medium text-white shadow-sm hover:bg-primary-700"
+      >
+        {copy.mail}
+      </a>
+      <LinkButton name="LinkedIn" icon="fa6-brands:linkedin" url="https://www.linkedin.com/in/thomas-flantua-3b543517b/" />
+    </div>
+  </div>
+</section>

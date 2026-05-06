@@ -1,0 +1,43 @@
+---
+import Fonts from '@/components/fonts.astro';
+import LanguageToggle from '@/web/components/language-toggle.astro';
+import Footer from '@/pdf/components/footer.astro';
+import PdfHighlights from '@/pdf/components/pdf-highlights.astro';
+import PdfTimeline from '@/pdf/components/pdf-timeline.astro';
+import EducationSection from '@/pdf/sections/education-section.pdf.astro';
+import ExperienceSection from '@/pdf/sections/experience-section.pdf.astro';
+import MainSection from '@/pdf/sections/main-section.pdf.astro';
+import PortfolioSection from '@/pdf/sections/portfolio-section.pdf.astro';
+import SkillsSection from '@/pdf/sections/skills-section.pdf.astro';
+
+import cv from '@/data';
+
+const { config, sections } = cv('en');
+
+const shouldRenderSection = (section: keyof typeof sections) => sections[section] && sections[section].config.visible;
+---
+
+<!DOCTYPE html>
+<html lang={config.i18n.locale.code}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PDF preview</title>
+    <Fonts />
+  </head>
+  <body class="flex flex-col gap-4 bg-gray-50 p-[10mm] print:p-0">
+    <LanguageToggle locale="en" nlHref="/pdf" enHref="/en/pdf" className="mb-4 self-end print:hidden" />
+    {shouldRenderSection('main') && <MainSection {...sections.main} />}
+    <div class="rounded-2xl bg-white p-5 shadow-md">
+      <PdfHighlights locale="en" />
+    </div>
+    <div class="rounded-2xl bg-white p-5 shadow-md">
+      <PdfTimeline locale="en" />
+    </div>
+    {shouldRenderSection('skills') && <SkillsSection {...sections.skills} />}
+    {shouldRenderSection('experience') && <ExperienceSection {...sections.experience} i18n={config.i18n} />}
+    {shouldRenderSection('portfolio') && <PortfolioSection {...sections.portfolio} i18n={config.i18n} />}
+    {shouldRenderSection('education') && <EducationSection {...sections.education} i18n={config.i18n} />}
+    {config.pdf?.footer && <Footer>{config.pdf.footer}</Footer>}
+  </body>
+</html>

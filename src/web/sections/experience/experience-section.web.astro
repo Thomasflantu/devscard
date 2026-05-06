@@ -1,17 +1,20 @@
 ---
 import type { ExperienceSection } from '@/types/sections/experience-section.types';
+import type { I18nConfig } from '@/types/config/i18n-config.types';
 import DividedList from '@/web/components/divided-list.astro';
 import Divider from '@/web/components/divider.astro';
 import SectionCard from '@/web/components/section-card.astro';
 import Job from './job.astro';
 
-export interface Props extends ExperienceSection {}
+export interface Props extends ExperienceSection {
+  i18n: I18nConfig;
+}
 
-const { config, jobs } = Astro.props;
+const { config, jobs, i18n } = Astro.props;
 ---
 
 <SectionCard {...config}>
   <DividedList>
-    {jobs.flatMap((job) => [<Job {...job} />, <Divider />])}
+    {jobs.flatMap((job) => [<Job {...job} i18n={i18n} />, <Divider />])}
   </DividedList>
 </SectionCard>

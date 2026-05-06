@@ -1,0 +1,92 @@
+---
+import type { SiteLocale } from '@/data/locales';
+import Icon from './icon.astro';
+import SectionCard from './section-card.astro';
+
+interface Props {
+  locale: SiteLocale;
+}
+
+const { locale } = Astro.props;
+
+const section =
+  locale === 'nl'
+    ? {
+        title: 'Tijdlijn',
+        items: [
+          {
+            date: '2020',
+            title: 'Start bij Avans',
+            description: 'Technische Informatica in Breda',
+            icon: 'fa6-solid:graduation-cap',
+          },
+          {
+            date: '2021',
+            title: 'BijGepast',
+            description: 'Mede-eigenaar en digitale projecten',
+            icon: 'fa6-solid:briefcase',
+          },
+          {
+            date: '2025',
+            title: 'Optimation stage',
+            description: 'PanelVision, OCR en machine learning',
+            icon: 'fa6-solid:microchip',
+          },
+          {
+            date: 'Nu',
+            title: 'Junior Software Engineer',
+            description: '.NET, C#, Blazor en automatisering',
+            icon: 'fa6-solid:code',
+          },
+        ],
+      }
+    : {
+        title: 'Timeline',
+        items: [
+          {
+            date: '2020',
+            title: 'Started at Avans',
+            description: 'Technical Informatics in Breda',
+            icon: 'fa6-solid:graduation-cap',
+          },
+          {
+            date: '2021',
+            title: 'BijGepast',
+            description: 'Co-owner and digital projects',
+            icon: 'fa6-solid:briefcase',
+          },
+          {
+            date: '2025',
+            title: 'Optimation internship',
+            description: 'PanelVision, OCR, and machine learning',
+            icon: 'fa6-solid:microchip',
+          },
+          {
+            date: 'Now',
+            title: 'Junior Software Engineer',
+            description: '.NET, C#, Blazor, and automation',
+            icon: 'fa6-solid:code',
+          },
+        ],
+      };
+---
+
+<SectionCard title={section.title} slug="timeline" icon="fa6-solid:clock-rotate-left" visible>
+  <ol class="relative grid gap-5 md:grid-cols-4 md:gap-3">
+    <div class="absolute left-5 top-5 h-[calc(100%-2.5rem)] w-px bg-gray-200 dark:bg-gray-700 md:left-0 md:right-0 md:top-8 md:mx-auto md:h-px md:w-[calc(100%-4rem)]" />
+    {
+      section.items.map((item) => (
+        <li class="relative flex gap-4 md:flex-col md:items-center md:text-center">
+          <div class="z-10 grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary-600 text-white shadow-md ring-4 ring-white dark:ring-gray-800">
+            <Icon name={item.icon} size={16} />
+          </div>
+          <div class="rounded-lg border border-gray-100 bg-gray-50 p-4 shadow-sm dark:border-gray-700 dark:bg-gray-700/40 md:min-h-[8.5rem]">
+            <div class="text-sm font-extrabold text-primary-600 dark:text-primary-300">{item.date}</div>
+            <div class="mt-1 text-base font-extrabold text-gray-900 dark:text-gray-100">{item.title}</div>
+            <p class="mt-2 text-sm leading-relaxed text-gray-500 dark:text-gray-300">{item.description}</p>
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+</SectionCard>

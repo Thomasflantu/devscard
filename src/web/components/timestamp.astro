@@ -1,14 +1,16 @@
 ---
 import type { DateRange } from '@/types/shared';
+import type { I18nConfig } from '@/types/config/i18n-config.types';
 import formatDateRange from '@/utils/format-date-range';
 import Typography from './typography.astro';
 
 export interface Props {
   dates: DateRange;
+  i18n: I18nConfig;
 }
-const { dates } = Astro.props;
+const { dates, i18n } = Astro.props;
 ---
 
 <Typography variant="item-subtitle-secondary">
-  {formatDateRange(dates)}
+  {formatDateRange(dates, i18n)}
 </Typography>

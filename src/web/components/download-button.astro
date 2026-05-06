@@ -1,13 +1,21 @@
 ---
 import type { DownloadButton } from '@/types/shared';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import Typography from './typography.astro';
 
 export interface Props extends DownloadButton {}
 
 const { url, downloadedFileName, label } = Astro.props;
 
+const filePath = url.startsWith('/') ? join(process.cwd(), 'public', url.slice(1)) : undefined;
+const hasGeneratedFile = filePath ? existsSync(filePath) : true;
+const fallbackUrl = url.includes('cv-en') ? '/en/pdf' : '/pdf';
+const href = hasGeneratedFile ? url : fallbackUrl;
+const download = hasGeneratedFile ? downloadedFileName : undefined;
+
 const classes = /* tw */ {
-  main: 'inline-flex items-center px-4 h-10 rounded-md shadow-sm bg-primary-600 select-none cursor-pointer',
+  main: 'inline-flex h-11 min-w-[9rem] items-center justify-center rounded-lg bg-primary-600 px-5 text-center shadow-sm select-none cursor-pointer',
   hover: 'hover:bg-primary-700',
   active: 'active:translate-y-px',
   focus: 'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500',
@@ -16,6 +24,6 @@ const classes = /* tw */ {
 const className = Object.values(classes).join(' ');
 ---
 
-<Typography variant="button" as="a" href={url} class={className} download={downloadedFileName}>
+<Typography variant="button" as="a" href={href} class={className} download={download}>
   {label}
 </Typography>

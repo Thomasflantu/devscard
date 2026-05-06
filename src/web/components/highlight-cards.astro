@@ -1,0 +1,33 @@
+---
+import type { SiteLocale } from '@/data/locales';
+
+interface Props {
+  locale: SiteLocale;
+}
+
+const { locale } = Astro.props;
+
+const cards =
+  locale === 'nl'
+    ? [
+        { title: '.NET & C#', text: 'Bouwt applicaties en services met een praktische engineering mindset.' },
+        { title: 'AI & OCR', text: 'Ervaring met machine learning, schemaherkenning en beeldclassificatie.' },
+        { title: 'Ondernemend', text: 'Combineert techniek met klantgericht denken vanuit BijGepast.' },
+      ]
+    : [
+        { title: '.NET & C#', text: 'Builds applications and services with a practical engineering mindset.' },
+        { title: 'AI & OCR', text: 'Experience with machine learning, schematic recognition, and image classification.' },
+        { title: 'Entrepreneurial', text: 'Combines technology with customer-focused thinking through BijGepast.' },
+      ];
+---
+
+<div class="grid gap-3 sm:grid-cols-3">
+  {
+    cards.map((card) => (
+      <div class="rounded-lg border border-gray-100 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-700/40">
+        <div class="text-sm font-extrabold text-gray-900 dark:text-gray-100">{card.title}</div>
+        <p class="mt-1 text-sm leading-relaxed text-gray-500 dark:text-gray-300">{card.text}</p>
+      </div>
+    ))
+  }
+</div>
