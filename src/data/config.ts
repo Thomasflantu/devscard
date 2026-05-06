@@ -1,18 +1,14 @@
 import type { Config } from '@/types/data';
 import type { SiteLocale } from './locales';
-import nlModule from 'date-fns/locale/nl';
-import enUSModule from 'date-fns/locale/en-US';
+import { nl as dateFnsNl, enUS as dateFnsEnUS } from 'date-fns/locale';
 
-const rawNl = (nlModule as any).default ?? (nlModule as any).nl ?? nlModule;
-const rawEnUS = (enUSModule as any).default ?? (enUSModule as any).enUS ?? enUSModule;
-
-const nl = {
-  ...rawNl,
+const nlLocale = {
+  ...dateFnsNl,
   code: 'nl-NL',
 };
 
-const enUS = {
-  ...rawEnUS,
+const enUSLocale = {
+  ...dateFnsEnUS,
   code: 'en-US',
 };
 
@@ -20,7 +16,7 @@ const getConfig = (locale: SiteLocale = 'nl'): Config =>
   locale === 'nl'
     ? {
         i18n: {
-          locale: nl,
+          locale: nlLocale,
           dateFormat: 'MMMM yyyy',
           translations: {
             now: 'heden',
@@ -41,7 +37,7 @@ const getConfig = (locale: SiteLocale = 'nl'): Config =>
       }
     : {
         i18n: {
-          locale: enUS,
+          locale: enUSLocale,
           dateFormat: 'MMMM yyyy',
           translations: {
             now: 'now',
