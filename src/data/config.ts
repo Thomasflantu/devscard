@@ -28,7 +28,7 @@ const getConfig = (locale: SiteLocale = 'nl'): Config =>
             'Een hardwerkende student die zijn vaardigheden en passie wil inzetten om de missie van een onderneming vorm te geven. ' +
             'Bedreven in het omgaan met technologie, waaronder diverse sociaal-mediaplatforms en office-programma’s. ' +
             'Beschikt over gevorderde computervaardigheden en is gemotiveerd om nieuwe programma’s snel te leren beheersen.',
-          faviconPath: '/src/assets/HeadImage_CV.jpg',
+          faviconPath: '/src/assets/HeadImage_CV.png',
         },
         pdf: {
           footer:
@@ -49,7 +49,7 @@ const getConfig = (locale: SiteLocale = 'nl'): Config =>
             'A hard-working student who wants to use his skills and passion to help shape a company mission. ' +
             'Experienced with technology, including social media platforms and office software. ' +
             'Strong computer skills, a positive attitude, and a drive to quickly master new tools.',
-          faviconPath: '/src/assets/HeadImage_CV.jpg',
+          faviconPath: '/src/assets/HeadImage_CV.png',
         },
         pdf: {
           footer:

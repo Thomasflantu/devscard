@@ -11,7 +11,7 @@ const getMainSectionData = (locale: SiteLocale = 'nl'): MainSection =>
           slug: 'profiel',
           visible: true,
         },
-        image: import('@/assets/HeadImage_CV.jpg'),
+        image: import('@/assets/HeadImage_CV.png'),
         fullName: 'Thomas Flantua',
         role: 'Junior Software Engineer',
         details: [
@@ -49,7 +49,7 @@ const getMainSectionData = (locale: SiteLocale = 'nl'): MainSection =>
           slug: 'profile',
           visible: true,
         },
-        image: import('@/assets/HeadImage_CV.jpg'),
+        image: import('@/assets/HeadImage_CV.png'),
         fullName: 'Thomas Flantua',
         role: 'Junior Software Engineer',
         details: [
