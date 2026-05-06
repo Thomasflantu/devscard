@@ -1,6 +1,6 @@
 import type { Config } from '@/types/data';
 import type { SiteLocale } from './locales';
-import { nl as dateFnsNl, enUS as dateFnsEnUS } from 'date-fns/locale';
+import { nl as dateFnsNl, enUS as dateFnsEnUS } from 'date-fns/locale/index.js';
 
 const nlLocale = {
   ...dateFnsNl,
