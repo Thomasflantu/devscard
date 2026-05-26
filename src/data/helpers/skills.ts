@@ -90,8 +90,8 @@ export const webFlow = createSkillFactory({
 
 export const avalonia = createSkillFactory({
   name: 'Avalonia',
-  icon: 'simple-icons:avaloniaui',
-  iconColor: '##165BFF',
+  icon: 'fa6-solid:desktop',
+  iconColor: '#165BFF',
   url: 'https://avaloniaui.net/',
 });
 
@@ -104,7 +104,7 @@ export const domainDrivenDesign = createSkillFactory({
 
 export const eventDrivenArchitecture = createSkillFactory({
   name: 'Event-Driven Architecture',
-  icon: 'mdi:arrow-decision-auto', // werkt, conceptueel symbool
+  icon: 'fa6-solid:arrows-spin',
   iconColor: '#007ACC',
   url: 'https://medium.com/@seetharamugn/the-complete-guide-to-event-driven-architecture-b25226594227',
 });
@@ -118,7 +118,7 @@ export const bpmn = createSkillFactory({
 
 export const businessAnalysis = createSkillFactory({
   name: 'Business Analysis',
-  icon: 'mdi:account-tie',
+  icon: 'fa6-solid:chart-line',
   iconColor: '#007ACC',
   url: 'https://www.iiba.org/professional-development/career-centre/what-is-business-analysis',
 });
@@ -160,7 +160,7 @@ export const terraform = createSkillFactory({
 
 export const bicep = createSkillFactory({
   name: 'Bicep',
-  icon: 'mdi:code-brackets',
+  icon: 'fa6-solid:code',
   iconColor: '#008AD7',
   url: 'https://learn.microsoft.com/azure/azure-resource-manager/bicep/',
 });
@@ -174,28 +174,28 @@ export const kong = createSkillFactory({
 
 export const azureOpenAI = createSkillFactory({
   name: 'Azure OpenAI',
-  icon: 'mdi:brain',
+  icon: 'fa6-solid:brain',
   iconColor: '#0078D4',
   url: 'https://learn.microsoft.com/azure/ai-services/openai/',
 });
 
 export const azureMachineLearning = createSkillFactory({
   name: 'Azure Machine Learning',
-  icon: 'mdi:chart-bell-curve',
+  icon: 'fa6-solid:chart-line',
   iconColor: '#0078D4',
   url: 'https://learn.microsoft.com/azure/machine-learning/',
 });
 
 export const langChain = createSkillFactory({
   name: 'LangChain',
-  icon: 'mdi:link-variant',
+  icon: 'fa6-solid:link',
   iconColor: '#3B82F6',
   url: 'https://www.langchain.com/',
 });
 
 export const langGraph = createSkillFactory({
   name: 'LangGraph',
-  icon: 'mdi:graph-outline',
+  icon: 'fa6-solid:diagram-project',
   iconColor: '#6366F1',
   url: 'https://langchain-ai.github.io/langgraph/',
 });
@@ -286,7 +286,7 @@ export const blazor = createSkillFactory({
 
 export const radzen = createSkillFactory({
   name: 'Radzen',
-  icon: 'simple-icons:radzen',
+  icon: 'fa6-solid:table-cells',
   iconColor: '#0C7CD5',
   url: 'https://www.radzen.com/',
 });
@@ -300,14 +300,14 @@ export const pytorch = createSkillFactory({
 
 export const tesseract = createSkillFactory({
   name: 'Tesseract OCR',
-  icon: 'simple-icons:tesseract',
+  icon: 'fa6-solid:file-lines',
   iconColor: '#4285F4',
   url: 'https://github.com/tesseract-ocr/tesseract',
 });
 
 export const yolov8 = createSkillFactory({
   name: 'YOLOv8',
-  icon: 'simple-icons:ultralytics',
+  icon: 'fa6-solid:camera',
   iconColor: '#FFDD00',
   url: 'https://docs.ultralytics.com/',
 });
@@ -356,7 +356,7 @@ export const scrum = createSkillFactory({
 
 export const googlenet = createSkillFactory({
   name: 'GoogLeNet',
-  icon: 'simple-icons:googlegemini', // geen officiële GoogLeNet icon, dit is alternatief
+  icon: 'fa6-solid:network-wired',
   iconColor: '#34A853',
   url: 'https://en.wikipedia.org/wiki/GoogLeNet',
 });

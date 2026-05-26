@@ -8,17 +8,18 @@ export interface Props {
   class?: string;
   width?: number;
   height?: number;
+  loading?: 'eager' | 'lazy';
 }
 
-const { src, alt, class: className = '', ...props } = Astro.props;
+const { src, alt, class: className = '', loading: requestedLoading, ...props } = Astro.props;
 
 const isRemoteImage = typeof src === 'string';
-const loading = import.meta.env.PUBLIC_APP_ENV === 'snapshot' ? 'eager' : 'lazy';
+const loading = requestedLoading ?? (import.meta.env.PUBLIC_APP_ENV === 'snapshot' ? 'eager' : 'lazy');
 ---
 
 {
   isRemoteImage ? (
-    <img src={src} alt={alt} class={`object-cover ${className}`} {...props} />
+    <img src={src} alt={alt} loading={loading} class={`object-cover ${className}`} {...props} />
   ) : (
     <Image
       src={src}
