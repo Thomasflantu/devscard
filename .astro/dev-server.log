@@ -1,0 +1,78 @@
+[vite] connected.
+[2m13:39:11[22m [34m[types][39m Generated [2m1ms[22m
+[42m[1m astro [22m[49m [32mv6.2.2[39m [2mready in[22m 1496 [2mms[22m
+[2m┃[22m Local    [36mhttp://127.0.0.1:3000/[39m
+[2m13:39:11[22m [32mwatching for file changes...[39m
+
+[43m[30m update [39m[49m [33m▶ New version of Astro available: 6.4.2[39m
+  Run [36mnpx @astrojs/upgrade[39m to update
+
+[2m13:39:41[22m [34m[200][39m / [2m126ms[22m
+[2m13:39:41[22m [34m[200][39m / [2m28ms[22m
+[2m13:39:42[22m [34m[200][39m /_image [2m45ms[22m
+[2m13:39:42[22m [34m[200][39m /_image [2m48ms[22m
+[2m13:39:42[22m [34m[200][39m /_image [2m50ms[22m
+[2m13:39:42[22m [34m[200][39m /_image [2m51ms[22m
+[2m13:39:42[22m [34m[200][39m /_image [2m59ms[22m
+[2m13:39:42[22m [34m[200][39m /_image [2m12ms[22m
+[2m13:39:42[22m [34m[200][39m /_image [2m13ms[22m
+[2m13:39:42[22m [34m[200][39m /_image [2m17ms[22m
+[2m13:39:42[22m [34m[200][39m /_image [2m5ms[22m
+[2m13:39:42[22m [34m[200][39m /_image [2m52ms[22m
+[2m13:39:42[22m [34m[200][39m /_image [2m77ms[22m
+[2m13:39:42[22m [34m[vite][39m [32m✨ new dependencies optimized: [33miconify-icon, photoswipe, @floating-ui/dom, nanoid[32m[39m
+[2m13:39:42[22m [34m[vite][39m [32m✨ optimized dependencies changed. reloading[39m
+[2m13:39:42[22m [34m[200][39m / [2m34ms[22m
+[2m13:41:14[22m [34m[200][39m / [2m66ms[22m
+[2m13:41:14[22m [34m[200][39m / [2m80ms[22m
+[2m13:41:15[22m [34m[200][39m /pdf [2m31ms[22m
+[2m13:41:15[22m [34m[200][39m /pdf [2m32ms[22m
+[2m13:41:15[22m [34m[200][39m /_image [2m208ms[22m
+[2m13:41:43[22m [34m[watch][39m /src/styles/global.css
+[2m13:41:48[22m [34m[watch][39m /src/styles/global.css
+[2m13:41:52[22m [34m[watch][39m /src/styles/global.css
+[2m13:42:06[22m [34m[watch][39m /src/styles/global.css
+[2m13:42:12[22m [34m[watch][39m src/web/sections/portfolio/project.astro
+[2m13:42:20[22m [34m[watch][39m /src/styles/global.css
+[2m13:42:25[22m [34m[watch][39m /src/styles/global.css
+[2m13:42:33[22m [34m[200][39m / [2m37ms[22m
+[2m13:42:34[22m [34m[watch][39m /src/styles/global.css
+[2m13:42:34[22m [34m[watch][39m /src/styles/global.css
+[2m13:42:34[22m [34m[watch][39m /src/styles/global.css
+[2m13:42:34[22m [34m[watch][39m /src/styles/global.css
+[2m13:42:34[22m [34m[watch][39m src/web/sections/portfolio/project.astro
+[2m13:42:34[22m [34m[watch][39m /src/styles/global.css
+[2m13:42:34[22m [34m[watch][39m /src/styles/global.css
+[2m13:43:17[22m [34m[200][39m / [2m38ms[22m
+[2m13:43:17[22m [34m[200][39m /_image [2m78ms[22m
+[2m13:43:17[22m [34m[200][39m /_image [2m75ms[22m
+[2m13:43:17[22m [34m[200][39m /_image [2m76ms[22m
+[2m13:43:17[22m [34m[200][39m /_image [2m93ms[22m
+[2m13:43:17[22m [34m[200][39m /_image [2m22ms[22m
+[2m13:43:17[22m [34m[200][39m /_image [2m21ms[22m
+[2m13:43:17[22m [34m[200][39m /_image [2m20ms[22m
+[2m13:43:17[22m [34m[200][39m /_image [2m24ms[22m
+[2m13:43:17[22m [34m[200][39m /_image [2m9ms[22m
+[2m13:43:17[22m [34m[200][39m /_image [2m63ms[22m
+[2m13:43:17[22m [34m[200][39m /_image [2m91ms[22m
+[2m13:43:43[22m [34m[200][39m / [2m30ms[22m
+[2m13:43:44[22m [34m[200][39m /_image [2m13ms[22m
+[2m13:43:44[22m [34m[200][39m /_image [2m17ms[22m
+[2m13:43:44[22m [34m[200][39m /_image [2m20ms[22m
+[2m13:43:44[22m [34m[200][39m /_image [2m28ms[22m
+[2m13:43:44[22m [34m[200][39m /_image [2m20ms[22m
+[2m13:43:44[22m [34m[200][39m /_image [2m38ms[22m
+[2m13:43:44[22m [34m[200][39m /_image [2m19ms[22m
+[2m13:43:44[22m [34m[200][39m /_image [2m23ms[22m
+[2m13:43:44[22m [34m[200][39m /_image [2m14ms[22m
+[2m13:43:44[22m [34m[200][39m /_image [2m100ms[22m
+[2m13:43:44[22m [34m[200][39m /_image [2m79ms[22m
+[2m13:44:29[22m [34m[watch][39m stats.html
+[2m13:44:30[22m [34m[watch][39m stats.html
+[2m13:44:46[22m Configuration file updated. Restarting...
+[vite] connected.
+[2m13:44:47[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m13:44:47[22m [34m[vite][39m server restarted.
+[2m13:44:52[22m Configuration file updated. Restarting...
+[vite] connected.
+[2m13:44:53[22m [34m[vite][39m server restarted.

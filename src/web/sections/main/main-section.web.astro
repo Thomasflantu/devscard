@@ -22,7 +22,7 @@ const { action, config, description, details, fullName, image, links, role, tags
         alt={fullName}
         width={420}
         height={420}
-        class="h-28 w-28 max-w-none rounded-2xl object-cover object-top shadow-lg ring-1 ring-black/10 sm:h-40 sm:w-40 md:h-56 md:w-56"
+        class="ring-black/10 h-28 w-28 max-w-none rounded-2xl object-cover object-top shadow-lg ring-1 sm:h-40 sm:w-40 md:h-56 md:w-56"
       />
       <DownloadButton {...action} />
     </div>
@@ -47,7 +47,7 @@ const { action, config, description, details, fullName, image, links, role, tags
           {details.map((detail) => <LabelledValue {...detail} />)}
         </div>
         <div class="flex flex-col gap-4">
-          <Description content={description} />
+          <Description content={description} class="text-gray-900 dark:text-gray-100" />
           <TagsList tags={tags} />
         </div>
       </div>

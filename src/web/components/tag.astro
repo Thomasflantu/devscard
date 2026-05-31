@@ -3,9 +3,11 @@ import type { Tag } from '@/types/shared';
 import Icon from './icon.astro';
 import Typography from './typography.astro';
 
-export interface Props extends Tag {}
+export interface Props extends Tag {
+  class?: string;
+}
 
-const { name, description, icon, iconColor, url } = Astro.props;
+const { name, description, icon, iconColor, url, class: classNameOverride } = Astro.props;
 
 const className = /* tw */ 'flex h-6 w-fit items-center gap-x-1.5 rounded bg-gray-100 px-2.5 dark:bg-gray-700';
 const customProps = url
@@ -14,10 +16,10 @@ const customProps = url
       as: 'a',
       target: '_blank',
       rel: 'noopener noreferrer',
-      class: `${className} hover:bg-gray-200 dark:hover:bg-gray-600`,
+      class: `${className} ${classNameOverride ?? ''} hover:bg-gray-200 dark:hover:bg-gray-600`,
     } as const)
   : {
-      class: className,
+      class: `${className} ${classNameOverride ?? ''}`,
     };
 ---
 

@@ -18,28 +18,31 @@ const { config, projects, i18n } = Astro.props;
   <SectionHeading>{config.title}</SectionHeading>
   <div class="flex flex-col gap-3">
     {
-      projects.map(({ name, description, details, impact, pdfDetails, tagsList, dates }) => () => (
-        <div class="rounded-2xl bg-white p-4 shadow-md">
-          <div class="flex flex-col gap-2">
-            <ListItemHeading title={name} dates={dates} i18n={i18n} />
-            <Description content={description} />
-            {
-              impact && (
+      projects.map(({ name, description, details, impact, pdfDetails, tagsList, dates }, index) => () => (
+        <>
+          {index > 0 && <div class="mx-4 border-t border-gray-200" />}
+          <div class="rounded-2xl bg-white p-4 shadow-md">
+            <div class="flex flex-col gap-2">
+              <ListItemHeading title={name} dates={dates} i18n={i18n} />
+              <Description content={description} />
+              {impact && (
                 <div class="grid grid-cols-3 gap-2">
                   {[impact.contribution, impact.challenge, impact.result].map((text) => (
-                    <div class="rounded-lg bg-gray-50 px-2 py-1 text-[11px] leading-snug text-gray-600">{text}</div>
+                    <div class="rounded-lg bg-gray-50 px-2 py-1 text-[11px] font-semibold leading-snug text-gray-950">
+                      {text}
+                    </div>
                   ))}
                 </div>
-              )
-            }
-            <div class="flex flex-col gap-0.5">
-              {(pdfDetails ?? details).map((detail) => (
-                <LabelledValue {...detail} />
-              ))}
+              )}
+              <div class="flex flex-col gap-0.5">
+                {(pdfDetails ?? details).map((detail) => (
+                  <LabelledValue {...detail} />
+                ))}
+              </div>
+              <TagsList {...tagsList} />
             </div>
-            <TagsList {...tagsList} />
           </div>
-        </div>
+        </>
       ))
     }
   </div>

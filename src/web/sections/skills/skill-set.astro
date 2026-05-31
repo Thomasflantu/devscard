@@ -26,7 +26,10 @@ const isLevelledSkillSection = (skills: Props['skills']): skills is LevelledSkil
         ))}
       </div>
     ) : (
-      <TagsList tags={skills} />
+      <TagsList
+        tags={skills}
+        tagClass="bg-primary-50 text-primary-900 ring-1 ring-primary-100 dark:bg-primary-900/40 dark:text-primary-100 dark:ring-primary-700"
+      />
     )
   }
 </div>

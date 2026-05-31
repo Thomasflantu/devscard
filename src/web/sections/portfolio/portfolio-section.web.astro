@@ -42,12 +42,12 @@ const filterAllLabel = i18n.locale.code.startsWith('nl') ? 'Alles' : 'All';
   }
   <DividedList>
     {
-      projects.map((project) => (
+      projects.flatMap((project) => [
         <div data-project-categories={(project.categories ?? []).join('|')}>
           <Project {...project} i18n={i18n} screenshotsConfig={config.screenshots} />
-          <Divider />
-        </div>
-      ))
+        </div>,
+        <Divider />,
+      ])
     }
   </DividedList>
 </SectionCard>
