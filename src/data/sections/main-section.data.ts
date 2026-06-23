@@ -25,8 +25,8 @@ const getMainSectionData = (locale: SiteLocale = 'nl'): MainSection =>
           { label: 'LinkedIn', value: '/in/thomas-flantua-3b543517b', url: 'https://linkedin.com' },
           {
             label: 'Website',
-            value: 'https://euphonious-queijadas-62a72f.netlify.app/#profile',
-            url: 'https://euphonious-queijadas-62a72f.netlify.app/#profile',
+            value: 'tflantua.nl',
+            url: 'https://tflantua.nl',
             fullRow: true,
           },
         ],
@@ -63,8 +63,8 @@ const getMainSectionData = (locale: SiteLocale = 'nl'): MainSection =>
           { label: 'LinkedIn', value: '/in/thomas-flantua-3b543517b', url: 'https://linkedin.com' },
           {
             label: 'Website',
-            value: 'https://euphonious-queijadas-62a72f.netlify.app/#profile',
-            url: 'https://euphonious-queijadas-62a72f.netlify.app/#profile',
+            value: 'tflantua.nl',
+            url: 'https://tflantua.nl',
             fullRow: true,
           },
         ],
